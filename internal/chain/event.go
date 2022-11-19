@@ -1,16 +1,14 @@
-package event
+package chain
 
 import (
 	"context"
 	"encoding/json"
 	"fmt"
-	"log"
-	"utils/abi/libra_auction"
-	"utils/abi/usdt_deposit"
-
 	"github.com/ethereum/go-ethereum/accounts/abi/bind"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/ethclient"
+	"github.com/ronin66666/go-eth/internal/abi/erc20"
+	"log"
 )
 
 const ethUrl = "https://mainnet.infura.io/v3/92983deb8689407bb1736bdf82bf9c9c"
@@ -28,7 +26,7 @@ func FilterEvent() {
 
 	addr := common.HexToAddress(deposit)
 
-	ct, err := usdt_deposit.NewUsdtDeposit(addr, client)
+	ct, err := erc20.NewErc20(addr, client)
 	if err != nil {
 		log.Fatalln(err)
 	}
@@ -39,7 +37,7 @@ func FilterEvent() {
 		Context: context.Background(), Start: start, End: nil,
 	}
 
-	itr, err := ct.FilterDeposited(filterOpts)
+	itr, err := ct.FilterTransfer(filterOpts, nil, nil)
 	if err != nil {
 		log.Fatalln(err)
 	}
@@ -62,7 +60,7 @@ func WatchEvent() {
 
 	addr := common.HexToAddress(deposit)
 
-	ct, err := libra_auction.NewLibraAuction(addr, client)
+	ct, err := erc20.NewErc20(addr, client)
 	if err != nil {
 		log.Fatalln(err)
 	}
@@ -73,10 +71,10 @@ func WatchEvent() {
 		Context: context.Background(),
 	}
 
-	chanel := make(chan *libra_auction.LibraAuctionRebate)
+	chanel := make(chan *erc20.Erc20Transfer)
 
 	go func() {
-		sub, err := ct.WatchRebate(watchOpts, chanel, nil)
+		sub, err := ct.WatchTransfer(watchOpts, chanel, nil, nil)
 		if err != nil {
 			log.Fatalln("watch rebate error = ", err)
 		}

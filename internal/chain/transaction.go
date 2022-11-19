@@ -1,55 +1,45 @@
-package transaction
+package chain
 
 import (
-	"bytes"
 	"context"
-	"encoding/hex"
 	"fmt"
-	"log"
-
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/ethclient"
+	"github.com/ronin66666/go-eth/global"
+	"log"
 )
 
-// getTransactionCount 根据区块hash获取该块中的交易数量
-func getTransactionCount(client *ethclient.Client, blockHash common.Hash) (uint, error) {
+// GetTransactionCount 根据区块hash获取该块中的交易数量
+func (client *Client) GetTransactionCount(blockHash common.Hash) (uint, error) {
 	return client.TransactionCount(context.Background(), blockHash)
 }
 
-// 获取交易信息
-func GetTransactions(client *ethclient.Client, block *types.Block) {
+//GetTransactions 获取交易信息
+func (client *Client) GetTransactions(block *types.Block) {
 	chainId, err := client.ChainID(context.Background())
 	if err != nil {
-		log.Fatal(err)
+		log.Fatalln(err)
 	}
-
 	for _, tx := range block.Transactions() {
-
 		fmt.Println(tx.Hash().Hex())
 
 		// 读取发送方的地址
 		// AsMessage() 方法需要EIP155签名者
 		msg, err := tx.AsMessage(types.NewEIP155Signer(chainId), nil)
 		if err != nil {
-			log.Fatal(err)
+			global.Logger.Error(err)
 		}
-		
 		fmt.Println("msg.from = ", msg.From().Hex(), " to = ", tx.To().Hex())
 
-		
-		buf := new(bytes.Buffer)
-		if err := tx.EncodeRLP(buf); err != nil {
+		data, err := tx.MarshalJSON()
+		if err != nil {
 			log.Fatal(err)
 		}
-		data := hex.EncodeToString(buf.Bytes())
-		fmt.Println("data = ", data)
-
-		GetTransactionRecipt(client, tx.Hash())
+		fmt.Println(string(data))
 	}
 }
 
-func GetTransactionRecipt(client *ethclient.Client, txHash common.Hash) {
+func (client *Client) GetTransactionReceipt(txHash common.Hash) {
 	receipt, err := client.TransactionReceipt(context.Background(), txHash)
 	if err != nil {
 		log.Fatal(err)
@@ -61,4 +51,3 @@ func GetTransactionRecipt(client *ethclient.Client, txHash common.Hash) {
 	}
 	fmt.Println("receipt = ", string(bytes))
 }
-

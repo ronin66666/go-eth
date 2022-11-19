@@ -1,19 +1,32 @@
 package main
 
-func main() {
-	//client, err := client.GetClient(global.LixbUrl)
-	//if err != nil {
-	//	log.Fatalln(err)
-	//}
-	//blockNumber := big.NewInt(340646)
-	//
-	////获取区块
-	//block, err := client.BlockByNumber(context.Background(), blockNumber)
-	//if err != nil {
-	//	log.Fatalln(err)
-	//}
-	//transaction.GetTransactions(client, block)
+import (
+	"github.com/ronin66666/go-eth/global"
+	"github.com/sirupsen/logrus"
+	"io"
+	"io/fs"
+	"os"
+)
 
-	// event.FilterEvent()
-	// event.WatchEvent()
+func init() {
+	setupLogger()
+}
+
+func setupLogger() {
+	logger := logrus.New()
+	logger.SetLevel(logrus.TraceLevel)
+	logger.SetReportCaller(true) //是否输出文件名
+
+	fileName := "storage/logs/log.log"
+	fwriter, err := os.OpenFile(fileName, os.O_WRONLY|os.O_CREATE, fs.ModePerm)
+	if err != nil {
+		logger.Error(err)
+	}
+
+	logger.SetOutput(io.MultiWriter(os.Stdout, fwriter))
+	global.Logger = logger
+}
+
+func main() {
+
 }
