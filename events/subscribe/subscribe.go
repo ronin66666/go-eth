@@ -7,7 +7,7 @@ import (
 	"github.com/ethereum/go-ethereum/accounts/abi/bind"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/ethclient"
-	"github.com/ronin66666/go-eth/abi/subscribe"
+	"github.com/ronin66666/go-eth/internal/abi/subscribe"
 	"log"
 )
 
