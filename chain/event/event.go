@@ -4,22 +4,21 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
-	"log"
-	"utils/abi/libra_auction"
-	"utils/abi/usdt_deposit"
-
 	"github.com/ethereum/go-ethereum/accounts/abi/bind"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/ethclient"
+	"github.com/ronin66666/go-eth/abi/libra_auction"
+	"github.com/ronin66666/go-eth/abi/usdt_deposit"
+	"log"
 )
 
 const ethUrl = "https://mainnet.infura.io/v3/92983deb8689407bb1736bdf82bf9c9c"
 
-//busd token
+// busd token
 const deposit = "0xe069aE4B336Ca73142cDc5206ed4a4d3A3ff39f6 "
 
 // FilterEvent
-//filtering for evens: 主要用于抓取历史事件
+// filtering for evens: 主要用于抓取历史事件
 func FilterEvent() {
 	client, err := ethclient.Dial(ethUrl)
 	if err != nil {
