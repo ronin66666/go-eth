@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/core/types"
+	"github.com/ethereum/go-ethereum/ethclient"
 	"github.com/ronin66666/go-eth/global"
 	"log"
 )
@@ -14,7 +15,7 @@ func (client *Client) GetTransactionCount(blockHash common.Hash) (uint, error) {
 	return client.TransactionCount(context.Background(), blockHash)
 }
 
-//GetTransactions 获取交易信息
+// GetTransactions 获取交易信息
 func (client *Client) GetTransactions(block *types.Block) {
 	chainId, err := client.ChainID(context.Background())
 	if err != nil {
@@ -40,6 +41,19 @@ func (client *Client) GetTransactions(block *types.Block) {
 }
 
 func (client *Client) GetTransactionReceipt(txHash common.Hash) {
+	receipt, err := client.TransactionReceipt(context.Background(), txHash)
+	if err != nil {
+		log.Fatal(err)
+	}
+	fmt.Println("receipt.Status = ", receipt.Status)
+	bytes, err := receipt.MarshalJSON()
+	if err != nil {
+		log.Fatal(err)
+	}
+	fmt.Println("receipt = ", string(bytes))
+}
+
+func GetTransactionReceipt(client *ethclient.Client, txHash common.Hash) {
 	receipt, err := client.TransactionReceipt(context.Background(), txHash)
 	if err != nil {
 		log.Fatal(err)

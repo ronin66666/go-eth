@@ -11,10 +11,6 @@ import (
 	"log"
 )
 
-// 2888
-const lixbTestURl = "https://test.lixb.io"
-const subscribeAddr = "0x8EB0C7072a6e258cC73228C46d6C7e5683E7b3CA"
-
 func FilterDeposited(client *ethclient.Client, subscribeAddr string) {
 
 	addr := common.HexToAddress(subscribeAddr)
@@ -23,7 +19,8 @@ func FilterDeposited(client *ethclient.Client, subscribeAddr string) {
 	if err != nil {
 		log.Fatalln(err)
 	}
-	const start uint64 = 411899
+	const start uint64 = 715153
+
 	filterOpts := &bind.FilterOpts{
 		Start:   start,
 		End:     nil,

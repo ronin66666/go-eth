@@ -1,0 +1,32 @@
+
+PrivateKey: 46222b6a9e389deef3fa075c6c633c033e68c904b39d41ca294c37432ef141c0
+
+RPCUrl:
+    Mainnet:
+        Url:https://mainnet.infura.io/v3/92983deb8689407bb1736bdf82bf9c9c
+        ChainId:1
+    Goerli:
+        Url:https://goerli.infura.io/v3/92983deb8689407bb1736bdf82bf9c9c
+        ChainId:5
+    Lixbtest:
+        Url:https://test.lixb.io
+        ChainId:2888
+APP:
+    DefaultPageSize: 10
+    MaxPageSize: 100
+Log:
+    LogSavePath: storage/logs
+    LogFileName: app
+    LogFileExt: .log
+
+DataBase:
+    DBType: mysql
+    UserName: root
+    Password: 123456
+    Host: 127.0.0.1:3306
+    DBName:
+        TablePrefix: eth_
+        Charset: uft8
+        ParseTime: True
+        MaxIdleConns: 10
+        MaxOpenConns: 30

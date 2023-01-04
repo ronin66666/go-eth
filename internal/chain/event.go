@@ -7,12 +7,7 @@ import (
 	"github.com/ethereum/go-ethereum/accounts/abi/bind"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/ethclient"
-<<<<<<< HEAD:chain/event/event.go
-	"github.com/ronin66666/go-eth/abi/libra_auction"
-	"github.com/ronin66666/go-eth/abi/usdt_deposit"
-=======
 	"github.com/ronin66666/go-eth/internal/abi/erc20"
->>>>>>> 8411e38f3bb2906dfba83cc08a7642dcb7baa95b:internal/chain/event.go
 	"log"
 )
 
