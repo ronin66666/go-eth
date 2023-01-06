@@ -28,7 +28,7 @@ var (
 	_ = event.NewSubscription
 )
 
-// ERC1155MetaData contains all meta data concerning the ERC1155 contract.
+// ERC1155MetaData contains all meta data concerning the ERC1155 service.
 var ERC1155MetaData = &bind.MetaData{
 	ABI: "[{\"inputs\":[{\"internalType\":\"string\",\"name\":\"uri_\",\"type\":\"string\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"operator\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"bool\",\"name\":\"approved\",\"type\":\"bool\"}],\"name\":\"ApprovalForAll\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"operator\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256[]\",\"name\":\"ids\",\"type\":\"uint256[]\"},{\"indexed\":false,\"internalType\":\"uint256[]\",\"name\":\"values\",\"type\":\"uint256[]\"}],\"name\":\"TransferBatch\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"operator\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"value\",\"type\":\"uint256\"}],\"name\":\"TransferSingle\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"string\",\"name\":\"value\",\"type\":\"string\"},{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"}],\"name\":\"URI\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"}],\"name\":\"balanceOf\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address[]\",\"name\":\"accounts\",\"type\":\"address[]\"},{\"internalType\":\"uint256[]\",\"name\":\"ids\",\"type\":\"uint256[]\"}],\"name\":\"balanceOfBatch\",\"outputs\":[{\"internalType\":\"uint256[]\",\"name\":\"\",\"type\":\"uint256[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"operator\",\"type\":\"address\"}],\"name\":\"isApprovedForAll\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"internalType\":\"uint256[]\",\"name\":\"ids\",\"type\":\"uint256[]\"},{\"internalType\":\"uint256[]\",\"name\":\"amounts\",\"type\":\"uint256[]\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"name\":\"safeBatchTransferFrom\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"name\":\"safeTransferFrom\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"operator\",\"type\":\"address\"},{\"internalType\":\"bool\",\"name\":\"approved\",\"type\":\"bool\"}],\"name\":\"setApprovalForAll\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes4\",\"name\":\"interfaceId\",\"type\":\"bytes4\"}],\"name\":\"supportsInterface\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"uri\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"}]",
 }
@@ -37,66 +37,66 @@ var ERC1155MetaData = &bind.MetaData{
 // Deprecated: Use ERC1155MetaData.ABI instead.
 var ERC1155ABI = ERC1155MetaData.ABI
 
-// ERC1155 is an auto generated Go binding around an Ethereum contract.
+// ERC1155 is an auto generated Go binding around an Ethereum service.
 type ERC1155 struct {
-	ERC1155Caller     // Read-only binding to the contract
-	ERC1155Transactor // Write-only binding to the contract
-	ERC1155Filterer   // Log filterer for contract events
+	ERC1155Caller     // Read-only binding to the service
+	ERC1155Transactor // Write-only binding to the service
+	ERC1155Filterer   // Log filterer for service events
 }
 
-// ERC1155Caller is an auto generated read-only Go binding around an Ethereum contract.
+// ERC1155Caller is an auto generated read-only Go binding around an Ethereum service.
 type ERC1155Caller struct {
 	contract *bind.BoundContract // Generic contract wrapper for the low level calls
 }
 
-// ERC1155Transactor is an auto generated write-only Go binding around an Ethereum contract.
+// ERC1155Transactor is an auto generated write-only Go binding around an Ethereum service.
 type ERC1155Transactor struct {
 	contract *bind.BoundContract // Generic contract wrapper for the low level calls
 }
 
-// ERC1155Filterer is an auto generated log filtering Go binding around an Ethereum contract events.
+// ERC1155Filterer is an auto generated log filtering Go binding around an Ethereum service events.
 type ERC1155Filterer struct {
 	contract *bind.BoundContract // Generic contract wrapper for the low level calls
 }
 
-// ERC1155Session is an auto generated Go binding around an Ethereum contract,
+// ERC1155Session is an auto generated Go binding around an Ethereum service,
 // with pre-set call and transact options.
 type ERC1155Session struct {
-	Contract     *ERC1155          // Generic contract binding to set the session for
+	Contract     *ERC1155          // Generic service binding to set the session for
 	CallOpts     bind.CallOpts     // Call options to use throughout this session
 	TransactOpts bind.TransactOpts // Transaction auth options to use throughout this session
 }
 
-// ERC1155CallerSession is an auto generated read-only Go binding around an Ethereum contract,
+// ERC1155CallerSession is an auto generated read-only Go binding around an Ethereum service,
 // with pre-set call options.
 type ERC1155CallerSession struct {
-	Contract *ERC1155Caller // Generic contract caller binding to set the session for
+	Contract *ERC1155Caller // Generic service caller binding to set the session for
 	CallOpts bind.CallOpts  // Call options to use throughout this session
 }
 
-// ERC1155TransactorSession is an auto generated write-only Go binding around an Ethereum contract,
+// ERC1155TransactorSession is an auto generated write-only Go binding around an Ethereum service,
 // with pre-set transact options.
 type ERC1155TransactorSession struct {
-	Contract     *ERC1155Transactor // Generic contract transactor binding to set the session for
+	Contract     *ERC1155Transactor // Generic service transactor binding to set the session for
 	TransactOpts bind.TransactOpts  // Transaction auth options to use throughout this session
 }
 
-// ERC1155Raw is an auto generated low-level Go binding around an Ethereum contract.
+// ERC1155Raw is an auto generated low-level Go binding around an Ethereum service.
 type ERC1155Raw struct {
-	Contract *ERC1155 // Generic contract binding to access the raw methods on
+	Contract *ERC1155 // Generic service binding to access the raw methods on
 }
 
-// ERC1155CallerRaw is an auto generated low-level read-only Go binding around an Ethereum contract.
+// ERC1155CallerRaw is an auto generated low-level read-only Go binding around an Ethereum service.
 type ERC1155CallerRaw struct {
-	Contract *ERC1155Caller // Generic read-only contract binding to access the raw methods on
+	Contract *ERC1155Caller // Generic read-only service binding to access the raw methods on
 }
 
-// ERC1155TransactorRaw is an auto generated low-level write-only Go binding around an Ethereum contract.
+// ERC1155TransactorRaw is an auto generated low-level write-only Go binding around an Ethereum service.
 type ERC1155TransactorRaw struct {
-	Contract *ERC1155Transactor // Generic write-only contract binding to access the raw methods on
+	Contract *ERC1155Transactor // Generic write-only service binding to access the raw methods on
 }
 
-// NewERC1155 creates a new instance of ERC1155, bound to a specific deployed contract.
+// NewERC1155 creates a new instance of ERC1155, bound to a specific deployed service.
 func NewERC1155(address common.Address, backend bind.ContractBackend) (*ERC1155, error) {
 	contract, err := bindERC1155(address, backend, backend, backend)
 	if err != nil {
@@ -105,7 +105,7 @@ func NewERC1155(address common.Address, backend bind.ContractBackend) (*ERC1155,
 	return &ERC1155{ERC1155Caller: ERC1155Caller{contract: contract}, ERC1155Transactor: ERC1155Transactor{contract: contract}, ERC1155Filterer: ERC1155Filterer{contract: contract}}, nil
 }
 
-// NewERC1155Caller creates a new read-only instance of ERC1155, bound to a specific deployed contract.
+// NewERC1155Caller creates a new read-only instance of ERC1155, bound to a specific deployed service.
 func NewERC1155Caller(address common.Address, caller bind.ContractCaller) (*ERC1155Caller, error) {
 	contract, err := bindERC1155(address, caller, nil, nil)
 	if err != nil {
@@ -114,7 +114,7 @@ func NewERC1155Caller(address common.Address, caller bind.ContractCaller) (*ERC1
 	return &ERC1155Caller{contract: contract}, nil
 }
 
-// NewERC1155Transactor creates a new write-only instance of ERC1155, bound to a specific deployed contract.
+// NewERC1155Transactor creates a new write-only instance of ERC1155, bound to a specific deployed service.
 func NewERC1155Transactor(address common.Address, transactor bind.ContractTransactor) (*ERC1155Transactor, error) {
 	contract, err := bindERC1155(address, nil, transactor, nil)
 	if err != nil {
@@ -123,7 +123,7 @@ func NewERC1155Transactor(address common.Address, transactor bind.ContractTransa
 	return &ERC1155Transactor{contract: contract}, nil
 }
 
-// NewERC1155Filterer creates a new log filterer instance of ERC1155, bound to a specific deployed contract.
+// NewERC1155Filterer creates a new log filterer instance of ERC1155, bound to a specific deployed service.
 func NewERC1155Filterer(address common.Address, filterer bind.ContractFilterer) (*ERC1155Filterer, error) {
 	contract, err := bindERC1155(address, nil, nil, filterer)
 	if err != nil {
@@ -132,7 +132,7 @@ func NewERC1155Filterer(address common.Address, filterer bind.ContractFilterer) 
 	return &ERC1155Filterer{contract: contract}, nil
 }
 
-// bindERC1155 binds a generic wrapper to an already deployed contract.
+// bindERC1155 binds a generic wrapper to an already deployed service.
 func bindERC1155(address common.Address, caller bind.ContractCaller, transactor bind.ContractTransactor, filterer bind.ContractFilterer) (*bind.BoundContract, error) {
 	parsed, err := abi.JSON(strings.NewReader(ERC1155ABI))
 	if err != nil {
@@ -141,7 +141,7 @@ func bindERC1155(address common.Address, caller bind.ContractCaller, transactor 
 	return bind.NewBoundContract(address, parsed, caller, transactor, filterer), nil
 }
 
-// Call invokes the (constant) contract method with params as input values and
+// Call invokes the (constant) service method with params as input values and
 // sets the output to result. The result type might be a single field for simple
 // returns, a slice of interfaces for anonymous returns and a struct for named
 // returns.
@@ -149,18 +149,18 @@ func (_ERC1155 *ERC1155Raw) Call(opts *bind.CallOpts, result *[]interface{}, met
 	return _ERC1155.Contract.ERC1155Caller.contract.Call(opts, result, method, params...)
 }
 
-// Transfer initiates a plain transaction to move funds to the contract, calling
+// Transfer initiates a plain transaction to move funds to the service, calling
 // its default method if one is available.
 func (_ERC1155 *ERC1155Raw) Transfer(opts *bind.TransactOpts) (*types.Transaction, error) {
 	return _ERC1155.Contract.ERC1155Transactor.contract.Transfer(opts)
 }
 
-// Transact invokes the (paid) contract method with params as input values.
+// Transact invokes the (paid) service method with params as input values.
 func (_ERC1155 *ERC1155Raw) Transact(opts *bind.TransactOpts, method string, params ...interface{}) (*types.Transaction, error) {
 	return _ERC1155.Contract.ERC1155Transactor.contract.Transact(opts, method, params...)
 }
 
-// Call invokes the (constant) contract method with params as input values and
+// Call invokes the (constant) service method with params as input values and
 // sets the output to result. The result type might be a single field for simple
 // returns, a slice of interfaces for anonymous returns and a struct for named
 // returns.
@@ -168,18 +168,18 @@ func (_ERC1155 *ERC1155CallerRaw) Call(opts *bind.CallOpts, result *[]interface{
 	return _ERC1155.Contract.contract.Call(opts, result, method, params...)
 }
 
-// Transfer initiates a plain transaction to move funds to the contract, calling
+// Transfer initiates a plain transaction to move funds to the service, calling
 // its default method if one is available.
 func (_ERC1155 *ERC1155TransactorRaw) Transfer(opts *bind.TransactOpts) (*types.Transaction, error) {
 	return _ERC1155.Contract.contract.Transfer(opts)
 }
 
-// Transact invokes the (paid) contract method with params as input values.
+// Transact invokes the (paid) service method with params as input values.
 func (_ERC1155 *ERC1155TransactorRaw) Transact(opts *bind.TransactOpts, method string, params ...interface{}) (*types.Transaction, error) {
 	return _ERC1155.Contract.contract.Transact(opts, method, params...)
 }
 
-// BalanceOf is a free data retrieval call binding the contract method 0x00fdd58e.
+// BalanceOf is a free data retrieval call binding the service method 0x00fdd58e.
 //
 // Solidity: function balanceOf(address account, uint256 id) view returns(uint256)
 func (_ERC1155 *ERC1155Caller) BalanceOf(opts *bind.CallOpts, account common.Address, id *big.Int) (*big.Int, error) {
@@ -196,21 +196,21 @@ func (_ERC1155 *ERC1155Caller) BalanceOf(opts *bind.CallOpts, account common.Add
 
 }
 
-// BalanceOf is a free data retrieval call binding the contract method 0x00fdd58e.
+// BalanceOf is a free data retrieval call binding the service method 0x00fdd58e.
 //
 // Solidity: function balanceOf(address account, uint256 id) view returns(uint256)
 func (_ERC1155 *ERC1155Session) BalanceOf(account common.Address, id *big.Int) (*big.Int, error) {
 	return _ERC1155.Contract.BalanceOf(&_ERC1155.CallOpts, account, id)
 }
 
-// BalanceOf is a free data retrieval call binding the contract method 0x00fdd58e.
+// BalanceOf is a free data retrieval call binding the service method 0x00fdd58e.
 //
 // Solidity: function balanceOf(address account, uint256 id) view returns(uint256)
 func (_ERC1155 *ERC1155CallerSession) BalanceOf(account common.Address, id *big.Int) (*big.Int, error) {
 	return _ERC1155.Contract.BalanceOf(&_ERC1155.CallOpts, account, id)
 }
 
-// BalanceOfBatch is a free data retrieval call binding the contract method 0x4e1273f4.
+// BalanceOfBatch is a free data retrieval call binding the service method 0x4e1273f4.
 //
 // Solidity: function balanceOfBatch(address[] accounts, uint256[] ids) view returns(uint256[])
 func (_ERC1155 *ERC1155Caller) BalanceOfBatch(opts *bind.CallOpts, accounts []common.Address, ids []*big.Int) ([]*big.Int, error) {
@@ -227,21 +227,21 @@ func (_ERC1155 *ERC1155Caller) BalanceOfBatch(opts *bind.CallOpts, accounts []co
 
 }
 
-// BalanceOfBatch is a free data retrieval call binding the contract method 0x4e1273f4.
+// BalanceOfBatch is a free data retrieval call binding the service method 0x4e1273f4.
 //
 // Solidity: function balanceOfBatch(address[] accounts, uint256[] ids) view returns(uint256[])
 func (_ERC1155 *ERC1155Session) BalanceOfBatch(accounts []common.Address, ids []*big.Int) ([]*big.Int, error) {
 	return _ERC1155.Contract.BalanceOfBatch(&_ERC1155.CallOpts, accounts, ids)
 }
 
-// BalanceOfBatch is a free data retrieval call binding the contract method 0x4e1273f4.
+// BalanceOfBatch is a free data retrieval call binding the service method 0x4e1273f4.
 //
 // Solidity: function balanceOfBatch(address[] accounts, uint256[] ids) view returns(uint256[])
 func (_ERC1155 *ERC1155CallerSession) BalanceOfBatch(accounts []common.Address, ids []*big.Int) ([]*big.Int, error) {
 	return _ERC1155.Contract.BalanceOfBatch(&_ERC1155.CallOpts, accounts, ids)
 }
 
-// IsApprovedForAll is a free data retrieval call binding the contract method 0xe985e9c5.
+// IsApprovedForAll is a free data retrieval call binding the service method 0xe985e9c5.
 //
 // Solidity: function isApprovedForAll(address account, address operator) view returns(bool)
 func (_ERC1155 *ERC1155Caller) IsApprovedForAll(opts *bind.CallOpts, account common.Address, operator common.Address) (bool, error) {
@@ -258,21 +258,21 @@ func (_ERC1155 *ERC1155Caller) IsApprovedForAll(opts *bind.CallOpts, account com
 
 }
 
-// IsApprovedForAll is a free data retrieval call binding the contract method 0xe985e9c5.
+// IsApprovedForAll is a free data retrieval call binding the service method 0xe985e9c5.
 //
 // Solidity: function isApprovedForAll(address account, address operator) view returns(bool)
 func (_ERC1155 *ERC1155Session) IsApprovedForAll(account common.Address, operator common.Address) (bool, error) {
 	return _ERC1155.Contract.IsApprovedForAll(&_ERC1155.CallOpts, account, operator)
 }
 
-// IsApprovedForAll is a free data retrieval call binding the contract method 0xe985e9c5.
+// IsApprovedForAll is a free data retrieval call binding the service method 0xe985e9c5.
 //
 // Solidity: function isApprovedForAll(address account, address operator) view returns(bool)
 func (_ERC1155 *ERC1155CallerSession) IsApprovedForAll(account common.Address, operator common.Address) (bool, error) {
 	return _ERC1155.Contract.IsApprovedForAll(&_ERC1155.CallOpts, account, operator)
 }
 
-// SupportsInterface is a free data retrieval call binding the contract method 0x01ffc9a7.
+// SupportsInterface is a free data retrieval call binding the service method 0x01ffc9a7.
 //
 // Solidity: function supportsInterface(bytes4 interfaceId) view returns(bool)
 func (_ERC1155 *ERC1155Caller) SupportsInterface(opts *bind.CallOpts, interfaceId [4]byte) (bool, error) {
@@ -289,21 +289,21 @@ func (_ERC1155 *ERC1155Caller) SupportsInterface(opts *bind.CallOpts, interfaceI
 
 }
 
-// SupportsInterface is a free data retrieval call binding the contract method 0x01ffc9a7.
+// SupportsInterface is a free data retrieval call binding the service method 0x01ffc9a7.
 //
 // Solidity: function supportsInterface(bytes4 interfaceId) view returns(bool)
 func (_ERC1155 *ERC1155Session) SupportsInterface(interfaceId [4]byte) (bool, error) {
 	return _ERC1155.Contract.SupportsInterface(&_ERC1155.CallOpts, interfaceId)
 }
 
-// SupportsInterface is a free data retrieval call binding the contract method 0x01ffc9a7.
+// SupportsInterface is a free data retrieval call binding the service method 0x01ffc9a7.
 //
 // Solidity: function supportsInterface(bytes4 interfaceId) view returns(bool)
 func (_ERC1155 *ERC1155CallerSession) SupportsInterface(interfaceId [4]byte) (bool, error) {
 	return _ERC1155.Contract.SupportsInterface(&_ERC1155.CallOpts, interfaceId)
 }
 
-// Uri is a free data retrieval call binding the contract method 0x0e89341c.
+// Uri is a free data retrieval call binding the service method 0x0e89341c.
 //
 // Solidity: function uri(uint256 ) view returns(string)
 func (_ERC1155 *ERC1155Caller) Uri(opts *bind.CallOpts, arg0 *big.Int) (string, error) {
@@ -320,86 +320,86 @@ func (_ERC1155 *ERC1155Caller) Uri(opts *bind.CallOpts, arg0 *big.Int) (string, 
 
 }
 
-// Uri is a free data retrieval call binding the contract method 0x0e89341c.
+// Uri is a free data retrieval call binding the service method 0x0e89341c.
 //
 // Solidity: function uri(uint256 ) view returns(string)
 func (_ERC1155 *ERC1155Session) Uri(arg0 *big.Int) (string, error) {
 	return _ERC1155.Contract.Uri(&_ERC1155.CallOpts, arg0)
 }
 
-// Uri is a free data retrieval call binding the contract method 0x0e89341c.
+// Uri is a free data retrieval call binding the service method 0x0e89341c.
 //
 // Solidity: function uri(uint256 ) view returns(string)
 func (_ERC1155 *ERC1155CallerSession) Uri(arg0 *big.Int) (string, error) {
 	return _ERC1155.Contract.Uri(&_ERC1155.CallOpts, arg0)
 }
 
-// SafeBatchTransferFrom is a paid mutator transaction binding the contract method 0x2eb2c2d6.
+// SafeBatchTransferFrom is a paid mutator transaction binding the service method 0x2eb2c2d6.
 //
 // Solidity: function safeBatchTransferFrom(address from, address to, uint256[] ids, uint256[] amounts, bytes data) returns()
 func (_ERC1155 *ERC1155Transactor) SafeBatchTransferFrom(opts *bind.TransactOpts, from common.Address, to common.Address, ids []*big.Int, amounts []*big.Int, data []byte) (*types.Transaction, error) {
 	return _ERC1155.contract.Transact(opts, "safeBatchTransferFrom", from, to, ids, amounts, data)
 }
 
-// SafeBatchTransferFrom is a paid mutator transaction binding the contract method 0x2eb2c2d6.
+// SafeBatchTransferFrom is a paid mutator transaction binding the service method 0x2eb2c2d6.
 //
 // Solidity: function safeBatchTransferFrom(address from, address to, uint256[] ids, uint256[] amounts, bytes data) returns()
 func (_ERC1155 *ERC1155Session) SafeBatchTransferFrom(from common.Address, to common.Address, ids []*big.Int, amounts []*big.Int, data []byte) (*types.Transaction, error) {
 	return _ERC1155.Contract.SafeBatchTransferFrom(&_ERC1155.TransactOpts, from, to, ids, amounts, data)
 }
 
-// SafeBatchTransferFrom is a paid mutator transaction binding the contract method 0x2eb2c2d6.
+// SafeBatchTransferFrom is a paid mutator transaction binding the service method 0x2eb2c2d6.
 //
 // Solidity: function safeBatchTransferFrom(address from, address to, uint256[] ids, uint256[] amounts, bytes data) returns()
 func (_ERC1155 *ERC1155TransactorSession) SafeBatchTransferFrom(from common.Address, to common.Address, ids []*big.Int, amounts []*big.Int, data []byte) (*types.Transaction, error) {
 	return _ERC1155.Contract.SafeBatchTransferFrom(&_ERC1155.TransactOpts, from, to, ids, amounts, data)
 }
 
-// SafeTransferFrom is a paid mutator transaction binding the contract method 0xf242432a.
+// SafeTransferFrom is a paid mutator transaction binding the service method 0xf242432a.
 //
 // Solidity: function safeTransferFrom(address from, address to, uint256 id, uint256 amount, bytes data) returns()
 func (_ERC1155 *ERC1155Transactor) SafeTransferFrom(opts *bind.TransactOpts, from common.Address, to common.Address, id *big.Int, amount *big.Int, data []byte) (*types.Transaction, error) {
 	return _ERC1155.contract.Transact(opts, "safeTransferFrom", from, to, id, amount, data)
 }
 
-// SafeTransferFrom is a paid mutator transaction binding the contract method 0xf242432a.
+// SafeTransferFrom is a paid mutator transaction binding the service method 0xf242432a.
 //
 // Solidity: function safeTransferFrom(address from, address to, uint256 id, uint256 amount, bytes data) returns()
 func (_ERC1155 *ERC1155Session) SafeTransferFrom(from common.Address, to common.Address, id *big.Int, amount *big.Int, data []byte) (*types.Transaction, error) {
 	return _ERC1155.Contract.SafeTransferFrom(&_ERC1155.TransactOpts, from, to, id, amount, data)
 }
 
-// SafeTransferFrom is a paid mutator transaction binding the contract method 0xf242432a.
+// SafeTransferFrom is a paid mutator transaction binding the service method 0xf242432a.
 //
 // Solidity: function safeTransferFrom(address from, address to, uint256 id, uint256 amount, bytes data) returns()
 func (_ERC1155 *ERC1155TransactorSession) SafeTransferFrom(from common.Address, to common.Address, id *big.Int, amount *big.Int, data []byte) (*types.Transaction, error) {
 	return _ERC1155.Contract.SafeTransferFrom(&_ERC1155.TransactOpts, from, to, id, amount, data)
 }
 
-// SetApprovalForAll is a paid mutator transaction binding the contract method 0xa22cb465.
+// SetApprovalForAll is a paid mutator transaction binding the service method 0xa22cb465.
 //
 // Solidity: function setApprovalForAll(address operator, bool approved) returns()
 func (_ERC1155 *ERC1155Transactor) SetApprovalForAll(opts *bind.TransactOpts, operator common.Address, approved bool) (*types.Transaction, error) {
 	return _ERC1155.contract.Transact(opts, "setApprovalForAll", operator, approved)
 }
 
-// SetApprovalForAll is a paid mutator transaction binding the contract method 0xa22cb465.
+// SetApprovalForAll is a paid mutator transaction binding the service method 0xa22cb465.
 //
 // Solidity: function setApprovalForAll(address operator, bool approved) returns()
 func (_ERC1155 *ERC1155Session) SetApprovalForAll(operator common.Address, approved bool) (*types.Transaction, error) {
 	return _ERC1155.Contract.SetApprovalForAll(&_ERC1155.TransactOpts, operator, approved)
 }
 
-// SetApprovalForAll is a paid mutator transaction binding the contract method 0xa22cb465.
+// SetApprovalForAll is a paid mutator transaction binding the service method 0xa22cb465.
 //
 // Solidity: function setApprovalForAll(address operator, bool approved) returns()
 func (_ERC1155 *ERC1155TransactorSession) SetApprovalForAll(operator common.Address, approved bool) (*types.Transaction, error) {
 	return _ERC1155.Contract.SetApprovalForAll(&_ERC1155.TransactOpts, operator, approved)
 }
 
-// ERC1155ApprovalForAllIterator is returned from FilterApprovalForAll and is used to iterate over the raw logs and unpacked data for ApprovalForAll events raised by the ERC1155 contract.
+// ERC1155ApprovalForAllIterator is returned from FilterApprovalForAll and is used to iterate over the raw logs and unpacked data for ApprovalForAll events raised by the ERC1155 service.
 type ERC1155ApprovalForAllIterator struct {
-	Event *ERC1155ApprovalForAll // Event containing the contract specifics and raw log
+	Event *ERC1155ApprovalForAll // Event containing the service specifics and raw log
 
 	contract *bind.BoundContract // Generic contract to use for unpacking event data
 	event    string              // Event name to use for unpacking event data
@@ -464,7 +464,7 @@ func (it *ERC1155ApprovalForAllIterator) Close() error {
 	return nil
 }
 
-// ERC1155ApprovalForAll represents a ApprovalForAll event raised by the ERC1155 contract.
+// ERC1155ApprovalForAll represents a ApprovalForAll event raised by the ERC1155 service.
 type ERC1155ApprovalForAll struct {
 	Account  common.Address
 	Operator common.Address
@@ -472,7 +472,7 @@ type ERC1155ApprovalForAll struct {
 	Raw      types.Log // Blockchain specific contextual infos
 }
 
-// FilterApprovalForAll is a free log retrieval operation binding the contract event 0x17307eab39ab6107e8899845ad3d59bd9653f200f220920489ca2b5937696c31.
+// FilterApprovalForAll is a free log retrieval operation binding the service event 0x17307eab39ab6107e8899845ad3d59bd9653f200f220920489ca2b5937696c31.
 //
 // Solidity: event ApprovalForAll(address indexed account, address indexed operator, bool approved)
 func (_ERC1155 *ERC1155Filterer) FilterApprovalForAll(opts *bind.FilterOpts, account []common.Address, operator []common.Address) (*ERC1155ApprovalForAllIterator, error) {
@@ -493,7 +493,7 @@ func (_ERC1155 *ERC1155Filterer) FilterApprovalForAll(opts *bind.FilterOpts, acc
 	return &ERC1155ApprovalForAllIterator{contract: _ERC1155.contract, event: "ApprovalForAll", logs: logs, sub: sub}, nil
 }
 
-// WatchApprovalForAll is a free log subscription operation binding the contract event 0x17307eab39ab6107e8899845ad3d59bd9653f200f220920489ca2b5937696c31.
+// WatchApprovalForAll is a free log subscription operation binding the service event 0x17307eab39ab6107e8899845ad3d59bd9653f200f220920489ca2b5937696c31.
 //
 // Solidity: event ApprovalForAll(address indexed account, address indexed operator, bool approved)
 func (_ERC1155 *ERC1155Filterer) WatchApprovalForAll(opts *bind.WatchOpts, sink chan<- *ERC1155ApprovalForAll, account []common.Address, operator []common.Address) (event.Subscription, error) {
@@ -539,7 +539,7 @@ func (_ERC1155 *ERC1155Filterer) WatchApprovalForAll(opts *bind.WatchOpts, sink 
 	}), nil
 }
 
-// ParseApprovalForAll is a log parse operation binding the contract event 0x17307eab39ab6107e8899845ad3d59bd9653f200f220920489ca2b5937696c31.
+// ParseApprovalForAll is a log parse operation binding the service event 0x17307eab39ab6107e8899845ad3d59bd9653f200f220920489ca2b5937696c31.
 //
 // Solidity: event ApprovalForAll(address indexed account, address indexed operator, bool approved)
 func (_ERC1155 *ERC1155Filterer) ParseApprovalForAll(log types.Log) (*ERC1155ApprovalForAll, error) {
@@ -551,9 +551,9 @@ func (_ERC1155 *ERC1155Filterer) ParseApprovalForAll(log types.Log) (*ERC1155App
 	return event, nil
 }
 
-// ERC1155TransferBatchIterator is returned from FilterTransferBatch and is used to iterate over the raw logs and unpacked data for TransferBatch events raised by the ERC1155 contract.
+// ERC1155TransferBatchIterator is returned from FilterTransferBatch and is used to iterate over the raw logs and unpacked data for TransferBatch events raised by the ERC1155 service.
 type ERC1155TransferBatchIterator struct {
-	Event *ERC1155TransferBatch // Event containing the contract specifics and raw log
+	Event *ERC1155TransferBatch // Event containing the service specifics and raw log
 
 	contract *bind.BoundContract // Generic contract to use for unpacking event data
 	event    string              // Event name to use for unpacking event data
@@ -618,7 +618,7 @@ func (it *ERC1155TransferBatchIterator) Close() error {
 	return nil
 }
 
-// ERC1155TransferBatch represents a TransferBatch event raised by the ERC1155 contract.
+// ERC1155TransferBatch represents a TransferBatch event raised by the ERC1155 service.
 type ERC1155TransferBatch struct {
 	Operator common.Address
 	From     common.Address
@@ -628,7 +628,7 @@ type ERC1155TransferBatch struct {
 	Raw      types.Log // Blockchain specific contextual infos
 }
 
-// FilterTransferBatch is a free log retrieval operation binding the contract event 0x4a39dc06d4c0dbc64b70af90fd698a233a518aa5d07e595d983b8c0526c8f7fb.
+// FilterTransferBatch is a free log retrieval operation binding the service event 0x4a39dc06d4c0dbc64b70af90fd698a233a518aa5d07e595d983b8c0526c8f7fb.
 //
 // Solidity: event TransferBatch(address indexed operator, address indexed from, address indexed to, uint256[] ids, uint256[] values)
 func (_ERC1155 *ERC1155Filterer) FilterTransferBatch(opts *bind.FilterOpts, operator []common.Address, from []common.Address, to []common.Address) (*ERC1155TransferBatchIterator, error) {
@@ -653,7 +653,7 @@ func (_ERC1155 *ERC1155Filterer) FilterTransferBatch(opts *bind.FilterOpts, oper
 	return &ERC1155TransferBatchIterator{contract: _ERC1155.contract, event: "TransferBatch", logs: logs, sub: sub}, nil
 }
 
-// WatchTransferBatch is a free log subscription operation binding the contract event 0x4a39dc06d4c0dbc64b70af90fd698a233a518aa5d07e595d983b8c0526c8f7fb.
+// WatchTransferBatch is a free log subscription operation binding the service event 0x4a39dc06d4c0dbc64b70af90fd698a233a518aa5d07e595d983b8c0526c8f7fb.
 //
 // Solidity: event TransferBatch(address indexed operator, address indexed from, address indexed to, uint256[] ids, uint256[] values)
 func (_ERC1155 *ERC1155Filterer) WatchTransferBatch(opts *bind.WatchOpts, sink chan<- *ERC1155TransferBatch, operator []common.Address, from []common.Address, to []common.Address) (event.Subscription, error) {
@@ -703,7 +703,7 @@ func (_ERC1155 *ERC1155Filterer) WatchTransferBatch(opts *bind.WatchOpts, sink c
 	}), nil
 }
 
-// ParseTransferBatch is a log parse operation binding the contract event 0x4a39dc06d4c0dbc64b70af90fd698a233a518aa5d07e595d983b8c0526c8f7fb.
+// ParseTransferBatch is a log parse operation binding the service event 0x4a39dc06d4c0dbc64b70af90fd698a233a518aa5d07e595d983b8c0526c8f7fb.
 //
 // Solidity: event TransferBatch(address indexed operator, address indexed from, address indexed to, uint256[] ids, uint256[] values)
 func (_ERC1155 *ERC1155Filterer) ParseTransferBatch(log types.Log) (*ERC1155TransferBatch, error) {
@@ -715,9 +715,9 @@ func (_ERC1155 *ERC1155Filterer) ParseTransferBatch(log types.Log) (*ERC1155Tran
 	return event, nil
 }
 
-// ERC1155TransferSingleIterator is returned from FilterTransferSingle and is used to iterate over the raw logs and unpacked data for TransferSingle events raised by the ERC1155 contract.
+// ERC1155TransferSingleIterator is returned from FilterTransferSingle and is used to iterate over the raw logs and unpacked data for TransferSingle events raised by the ERC1155 service.
 type ERC1155TransferSingleIterator struct {
-	Event *ERC1155TransferSingle // Event containing the contract specifics and raw log
+	Event *ERC1155TransferSingle // Event containing the service specifics and raw log
 
 	contract *bind.BoundContract // Generic contract to use for unpacking event data
 	event    string              // Event name to use for unpacking event data
@@ -782,7 +782,7 @@ func (it *ERC1155TransferSingleIterator) Close() error {
 	return nil
 }
 
-// ERC1155TransferSingle represents a TransferSingle event raised by the ERC1155 contract.
+// ERC1155TransferSingle represents a TransferSingle event raised by the ERC1155 service.
 type ERC1155TransferSingle struct {
 	Operator common.Address
 	From     common.Address
@@ -792,7 +792,7 @@ type ERC1155TransferSingle struct {
 	Raw      types.Log // Blockchain specific contextual infos
 }
 
-// FilterTransferSingle is a free log retrieval operation binding the contract event 0xc3d58168c5ae7397731d063d5bbf3d657854427343f4c083240f7aacaa2d0f62.
+// FilterTransferSingle is a free log retrieval operation binding the service event 0xc3d58168c5ae7397731d063d5bbf3d657854427343f4c083240f7aacaa2d0f62.
 //
 // Solidity: event TransferSingle(address indexed operator, address indexed from, address indexed to, uint256 id, uint256 value)
 func (_ERC1155 *ERC1155Filterer) FilterTransferSingle(opts *bind.FilterOpts, operator []common.Address, from []common.Address, to []common.Address) (*ERC1155TransferSingleIterator, error) {
@@ -817,7 +817,7 @@ func (_ERC1155 *ERC1155Filterer) FilterTransferSingle(opts *bind.FilterOpts, ope
 	return &ERC1155TransferSingleIterator{contract: _ERC1155.contract, event: "TransferSingle", logs: logs, sub: sub}, nil
 }
 
-// WatchTransferSingle is a free log subscription operation binding the contract event 0xc3d58168c5ae7397731d063d5bbf3d657854427343f4c083240f7aacaa2d0f62.
+// WatchTransferSingle is a free log subscription operation binding the service event 0xc3d58168c5ae7397731d063d5bbf3d657854427343f4c083240f7aacaa2d0f62.
 //
 // Solidity: event TransferSingle(address indexed operator, address indexed from, address indexed to, uint256 id, uint256 value)
 func (_ERC1155 *ERC1155Filterer) WatchTransferSingle(opts *bind.WatchOpts, sink chan<- *ERC1155TransferSingle, operator []common.Address, from []common.Address, to []common.Address) (event.Subscription, error) {
@@ -867,7 +867,7 @@ func (_ERC1155 *ERC1155Filterer) WatchTransferSingle(opts *bind.WatchOpts, sink 
 	}), nil
 }
 
-// ParseTransferSingle is a log parse operation binding the contract event 0xc3d58168c5ae7397731d063d5bbf3d657854427343f4c083240f7aacaa2d0f62.
+// ParseTransferSingle is a log parse operation binding the service event 0xc3d58168c5ae7397731d063d5bbf3d657854427343f4c083240f7aacaa2d0f62.
 //
 // Solidity: event TransferSingle(address indexed operator, address indexed from, address indexed to, uint256 id, uint256 value)
 func (_ERC1155 *ERC1155Filterer) ParseTransferSingle(log types.Log) (*ERC1155TransferSingle, error) {
@@ -879,9 +879,9 @@ func (_ERC1155 *ERC1155Filterer) ParseTransferSingle(log types.Log) (*ERC1155Tra
 	return event, nil
 }
 
-// ERC1155URIIterator is returned from FilterURI and is used to iterate over the raw logs and unpacked data for URI events raised by the ERC1155 contract.
+// ERC1155URIIterator is returned from FilterURI and is used to iterate over the raw logs and unpacked data for URI events raised by the ERC1155 service.
 type ERC1155URIIterator struct {
-	Event *ERC1155URI // Event containing the contract specifics and raw log
+	Event *ERC1155URI // Event containing the service specifics and raw log
 
 	contract *bind.BoundContract // Generic contract to use for unpacking event data
 	event    string              // Event name to use for unpacking event data
@@ -946,14 +946,14 @@ func (it *ERC1155URIIterator) Close() error {
 	return nil
 }
 
-// ERC1155URI represents a URI event raised by the ERC1155 contract.
+// ERC1155URI represents a URI event raised by the ERC1155 service.
 type ERC1155URI struct {
 	Value string
 	Id    *big.Int
 	Raw   types.Log // Blockchain specific contextual infos
 }
 
-// FilterURI is a free log retrieval operation binding the contract event 0x6bb7ff708619ba0610cba295a58592e0451dee2622938c8755667688daf3529b.
+// FilterURI is a free log retrieval operation binding the service event 0x6bb7ff708619ba0610cba295a58592e0451dee2622938c8755667688daf3529b.
 //
 // Solidity: event URI(string value, uint256 indexed id)
 func (_ERC1155 *ERC1155Filterer) FilterURI(opts *bind.FilterOpts, id []*big.Int) (*ERC1155URIIterator, error) {
@@ -970,7 +970,7 @@ func (_ERC1155 *ERC1155Filterer) FilterURI(opts *bind.FilterOpts, id []*big.Int)
 	return &ERC1155URIIterator{contract: _ERC1155.contract, event: "URI", logs: logs, sub: sub}, nil
 }
 
-// WatchURI is a free log subscription operation binding the contract event 0x6bb7ff708619ba0610cba295a58592e0451dee2622938c8755667688daf3529b.
+// WatchURI is a free log subscription operation binding the service event 0x6bb7ff708619ba0610cba295a58592e0451dee2622938c8755667688daf3529b.
 //
 // Solidity: event URI(string value, uint256 indexed id)
 func (_ERC1155 *ERC1155Filterer) WatchURI(opts *bind.WatchOpts, sink chan<- *ERC1155URI, id []*big.Int) (event.Subscription, error) {
@@ -1012,7 +1012,7 @@ func (_ERC1155 *ERC1155Filterer) WatchURI(opts *bind.WatchOpts, sink chan<- *ERC
 	}), nil
 }
 
-// ParseURI is a log parse operation binding the contract event 0x6bb7ff708619ba0610cba295a58592e0451dee2622938c8755667688daf3529b.
+// ParseURI is a log parse operation binding the service event 0x6bb7ff708619ba0610cba295a58592e0451dee2622938c8755667688daf3529b.
 //
 // Solidity: event URI(string value, uint256 indexed id)
 func (_ERC1155 *ERC1155Filterer) ParseURI(log types.Log) (*ERC1155URI, error) {

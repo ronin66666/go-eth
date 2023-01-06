@@ -28,7 +28,7 @@ var (
 	_ = event.NewSubscription
 )
 
-// ERC721MetaData contains all meta data concerning the ERC721 contract.
+// ERC721MetaData contains all meta data concerning the ERC721 service.
 var ERC721MetaData = &bind.MetaData{
 	ABI: "[{\"inputs\":[{\"internalType\":\"string\",\"name\":\"name_\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"symbol_\",\"type\":\"string\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"approved\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"Approval\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"operator\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"bool\",\"name\":\"approved\",\"type\":\"bool\"}],\"name\":\"ApprovalForAll\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"Transfer\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"approve\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"}],\"name\":\"balanceOf\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"getApproved\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"operator\",\"type\":\"address\"}],\"name\":\"isApprovedForAll\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"name\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"ownerOf\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"safeTransferFrom\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"name\":\"safeTransferFrom\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"operator\",\"type\":\"address\"},{\"internalType\":\"bool\",\"name\":\"approved\",\"type\":\"bool\"}],\"name\":\"setApprovalForAll\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes4\",\"name\":\"interfaceId\",\"type\":\"bytes4\"}],\"name\":\"supportsInterface\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"symbol\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"tokenURI\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"transferFrom\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}]",
 }
@@ -37,66 +37,66 @@ var ERC721MetaData = &bind.MetaData{
 // Deprecated: Use ERC721MetaData.ABI instead.
 var ERC721ABI = ERC721MetaData.ABI
 
-// ERC721 is an auto generated Go binding around an Ethereum contract.
+// ERC721 is an auto generated Go binding around an Ethereum service.
 type ERC721 struct {
-	ERC721Caller     // Read-only binding to the contract
-	ERC721Transactor // Write-only binding to the contract
-	ERC721Filterer   // Log filterer for contract events
+	ERC721Caller     // Read-only binding to the service
+	ERC721Transactor // Write-only binding to the service
+	ERC721Filterer   // Log filterer for service events
 }
 
-// ERC721Caller is an auto generated read-only Go binding around an Ethereum contract.
+// ERC721Caller is an auto generated read-only Go binding around an Ethereum service.
 type ERC721Caller struct {
 	contract *bind.BoundContract // Generic contract wrapper for the low level calls
 }
 
-// ERC721Transactor is an auto generated write-only Go binding around an Ethereum contract.
+// ERC721Transactor is an auto generated write-only Go binding around an Ethereum service.
 type ERC721Transactor struct {
 	contract *bind.BoundContract // Generic contract wrapper for the low level calls
 }
 
-// ERC721Filterer is an auto generated log filtering Go binding around an Ethereum contract events.
+// ERC721Filterer is an auto generated log filtering Go binding around an Ethereum service events.
 type ERC721Filterer struct {
 	contract *bind.BoundContract // Generic contract wrapper for the low level calls
 }
 
-// ERC721Session is an auto generated Go binding around an Ethereum contract,
+// ERC721Session is an auto generated Go binding around an Ethereum service,
 // with pre-set call and transact options.
 type ERC721Session struct {
-	Contract     *ERC721           // Generic contract binding to set the session for
+	Contract     *ERC721           // Generic service binding to set the session for
 	CallOpts     bind.CallOpts     // Call options to use throughout this session
 	TransactOpts bind.TransactOpts // Transaction auth options to use throughout this session
 }
 
-// ERC721CallerSession is an auto generated read-only Go binding around an Ethereum contract,
+// ERC721CallerSession is an auto generated read-only Go binding around an Ethereum service,
 // with pre-set call options.
 type ERC721CallerSession struct {
-	Contract *ERC721Caller // Generic contract caller binding to set the session for
+	Contract *ERC721Caller // Generic service caller binding to set the session for
 	CallOpts bind.CallOpts // Call options to use throughout this session
 }
 
-// ERC721TransactorSession is an auto generated write-only Go binding around an Ethereum contract,
+// ERC721TransactorSession is an auto generated write-only Go binding around an Ethereum service,
 // with pre-set transact options.
 type ERC721TransactorSession struct {
-	Contract     *ERC721Transactor // Generic contract transactor binding to set the session for
+	Contract     *ERC721Transactor // Generic service transactor binding to set the session for
 	TransactOpts bind.TransactOpts // Transaction auth options to use throughout this session
 }
 
-// ERC721Raw is an auto generated low-level Go binding around an Ethereum contract.
+// ERC721Raw is an auto generated low-level Go binding around an Ethereum service.
 type ERC721Raw struct {
-	Contract *ERC721 // Generic contract binding to access the raw methods on
+	Contract *ERC721 // Generic service binding to access the raw methods on
 }
 
-// ERC721CallerRaw is an auto generated low-level read-only Go binding around an Ethereum contract.
+// ERC721CallerRaw is an auto generated low-level read-only Go binding around an Ethereum service.
 type ERC721CallerRaw struct {
-	Contract *ERC721Caller // Generic read-only contract binding to access the raw methods on
+	Contract *ERC721Caller // Generic read-only service binding to access the raw methods on
 }
 
-// ERC721TransactorRaw is an auto generated low-level write-only Go binding around an Ethereum contract.
+// ERC721TransactorRaw is an auto generated low-level write-only Go binding around an Ethereum service.
 type ERC721TransactorRaw struct {
-	Contract *ERC721Transactor // Generic write-only contract binding to access the raw methods on
+	Contract *ERC721Transactor // Generic write-only service binding to access the raw methods on
 }
 
-// NewERC721 creates a new instance of ERC721, bound to a specific deployed contract.
+// NewERC721 creates a new instance of ERC721, bound to a specific deployed service.
 func NewERC721(address common.Address, backend bind.ContractBackend) (*ERC721, error) {
 	contract, err := bindERC721(address, backend, backend, backend)
 	if err != nil {
@@ -105,7 +105,7 @@ func NewERC721(address common.Address, backend bind.ContractBackend) (*ERC721, e
 	return &ERC721{ERC721Caller: ERC721Caller{contract: contract}, ERC721Transactor: ERC721Transactor{contract: contract}, ERC721Filterer: ERC721Filterer{contract: contract}}, nil
 }
 
-// NewERC721Caller creates a new read-only instance of ERC721, bound to a specific deployed contract.
+// NewERC721Caller creates a new read-only instance of ERC721, bound to a specific deployed service.
 func NewERC721Caller(address common.Address, caller bind.ContractCaller) (*ERC721Caller, error) {
 	contract, err := bindERC721(address, caller, nil, nil)
 	if err != nil {
@@ -114,7 +114,7 @@ func NewERC721Caller(address common.Address, caller bind.ContractCaller) (*ERC72
 	return &ERC721Caller{contract: contract}, nil
 }
 
-// NewERC721Transactor creates a new write-only instance of ERC721, bound to a specific deployed contract.
+// NewERC721Transactor creates a new write-only instance of ERC721, bound to a specific deployed service.
 func NewERC721Transactor(address common.Address, transactor bind.ContractTransactor) (*ERC721Transactor, error) {
 	contract, err := bindERC721(address, nil, transactor, nil)
 	if err != nil {
@@ -123,7 +123,7 @@ func NewERC721Transactor(address common.Address, transactor bind.ContractTransac
 	return &ERC721Transactor{contract: contract}, nil
 }
 
-// NewERC721Filterer creates a new log filterer instance of ERC721, bound to a specific deployed contract.
+// NewERC721Filterer creates a new log filterer instance of ERC721, bound to a specific deployed service.
 func NewERC721Filterer(address common.Address, filterer bind.ContractFilterer) (*ERC721Filterer, error) {
 	contract, err := bindERC721(address, nil, nil, filterer)
 	if err != nil {
@@ -132,7 +132,7 @@ func NewERC721Filterer(address common.Address, filterer bind.ContractFilterer) (
 	return &ERC721Filterer{contract: contract}, nil
 }
 
-// bindERC721 binds a generic wrapper to an already deployed contract.
+// bindERC721 binds a generic wrapper to an already deployed service.
 func bindERC721(address common.Address, caller bind.ContractCaller, transactor bind.ContractTransactor, filterer bind.ContractFilterer) (*bind.BoundContract, error) {
 	parsed, err := abi.JSON(strings.NewReader(ERC721ABI))
 	if err != nil {
@@ -141,7 +141,7 @@ func bindERC721(address common.Address, caller bind.ContractCaller, transactor b
 	return bind.NewBoundContract(address, parsed, caller, transactor, filterer), nil
 }
 
-// Call invokes the (constant) contract method with params as input values and
+// Call invokes the (constant) service method with params as input values and
 // sets the output to result. The result type might be a single field for simple
 // returns, a slice of interfaces for anonymous returns and a struct for named
 // returns.
@@ -149,18 +149,18 @@ func (_ERC721 *ERC721Raw) Call(opts *bind.CallOpts, result *[]interface{}, metho
 	return _ERC721.Contract.ERC721Caller.contract.Call(opts, result, method, params...)
 }
 
-// Transfer initiates a plain transaction to move funds to the contract, calling
+// Transfer initiates a plain transaction to move funds to the service, calling
 // its default method if one is available.
 func (_ERC721 *ERC721Raw) Transfer(opts *bind.TransactOpts) (*types.Transaction, error) {
 	return _ERC721.Contract.ERC721Transactor.contract.Transfer(opts)
 }
 
-// Transact invokes the (paid) contract method with params as input values.
+// Transact invokes the (paid) service method with params as input values.
 func (_ERC721 *ERC721Raw) Transact(opts *bind.TransactOpts, method string, params ...interface{}) (*types.Transaction, error) {
 	return _ERC721.Contract.ERC721Transactor.contract.Transact(opts, method, params...)
 }
 
-// Call invokes the (constant) contract method with params as input values and
+// Call invokes the (constant) service method with params as input values and
 // sets the output to result. The result type might be a single field for simple
 // returns, a slice of interfaces for anonymous returns and a struct for named
 // returns.
@@ -168,18 +168,18 @@ func (_ERC721 *ERC721CallerRaw) Call(opts *bind.CallOpts, result *[]interface{},
 	return _ERC721.Contract.contract.Call(opts, result, method, params...)
 }
 
-// Transfer initiates a plain transaction to move funds to the contract, calling
+// Transfer initiates a plain transaction to move funds to the service, calling
 // its default method if one is available.
 func (_ERC721 *ERC721TransactorRaw) Transfer(opts *bind.TransactOpts) (*types.Transaction, error) {
 	return _ERC721.Contract.contract.Transfer(opts)
 }
 
-// Transact invokes the (paid) contract method with params as input values.
+// Transact invokes the (paid) service method with params as input values.
 func (_ERC721 *ERC721TransactorRaw) Transact(opts *bind.TransactOpts, method string, params ...interface{}) (*types.Transaction, error) {
 	return _ERC721.Contract.contract.Transact(opts, method, params...)
 }
 
-// BalanceOf is a free data retrieval call binding the contract method 0x70a08231.
+// BalanceOf is a free data retrieval call binding the service method 0x70a08231.
 //
 // Solidity: function balanceOf(address owner) view returns(uint256)
 func (_ERC721 *ERC721Caller) BalanceOf(opts *bind.CallOpts, owner common.Address) (*big.Int, error) {
@@ -196,21 +196,21 @@ func (_ERC721 *ERC721Caller) BalanceOf(opts *bind.CallOpts, owner common.Address
 
 }
 
-// BalanceOf is a free data retrieval call binding the contract method 0x70a08231.
+// BalanceOf is a free data retrieval call binding the service method 0x70a08231.
 //
 // Solidity: function balanceOf(address owner) view returns(uint256)
 func (_ERC721 *ERC721Session) BalanceOf(owner common.Address) (*big.Int, error) {
 	return _ERC721.Contract.BalanceOf(&_ERC721.CallOpts, owner)
 }
 
-// BalanceOf is a free data retrieval call binding the contract method 0x70a08231.
+// BalanceOf is a free data retrieval call binding the service method 0x70a08231.
 //
 // Solidity: function balanceOf(address owner) view returns(uint256)
 func (_ERC721 *ERC721CallerSession) BalanceOf(owner common.Address) (*big.Int, error) {
 	return _ERC721.Contract.BalanceOf(&_ERC721.CallOpts, owner)
 }
 
-// GetApproved is a free data retrieval call binding the contract method 0x081812fc.
+// GetApproved is a free data retrieval call binding the service method 0x081812fc.
 //
 // Solidity: function getApproved(uint256 tokenId) view returns(address)
 func (_ERC721 *ERC721Caller) GetApproved(opts *bind.CallOpts, tokenId *big.Int) (common.Address, error) {
@@ -227,21 +227,21 @@ func (_ERC721 *ERC721Caller) GetApproved(opts *bind.CallOpts, tokenId *big.Int) 
 
 }
 
-// GetApproved is a free data retrieval call binding the contract method 0x081812fc.
+// GetApproved is a free data retrieval call binding the service method 0x081812fc.
 //
 // Solidity: function getApproved(uint256 tokenId) view returns(address)
 func (_ERC721 *ERC721Session) GetApproved(tokenId *big.Int) (common.Address, error) {
 	return _ERC721.Contract.GetApproved(&_ERC721.CallOpts, tokenId)
 }
 
-// GetApproved is a free data retrieval call binding the contract method 0x081812fc.
+// GetApproved is a free data retrieval call binding the service method 0x081812fc.
 //
 // Solidity: function getApproved(uint256 tokenId) view returns(address)
 func (_ERC721 *ERC721CallerSession) GetApproved(tokenId *big.Int) (common.Address, error) {
 	return _ERC721.Contract.GetApproved(&_ERC721.CallOpts, tokenId)
 }
 
-// IsApprovedForAll is a free data retrieval call binding the contract method 0xe985e9c5.
+// IsApprovedForAll is a free data retrieval call binding the service method 0xe985e9c5.
 //
 // Solidity: function isApprovedForAll(address owner, address operator) view returns(bool)
 func (_ERC721 *ERC721Caller) IsApprovedForAll(opts *bind.CallOpts, owner common.Address, operator common.Address) (bool, error) {
@@ -258,21 +258,21 @@ func (_ERC721 *ERC721Caller) IsApprovedForAll(opts *bind.CallOpts, owner common.
 
 }
 
-// IsApprovedForAll is a free data retrieval call binding the contract method 0xe985e9c5.
+// IsApprovedForAll is a free data retrieval call binding the service method 0xe985e9c5.
 //
 // Solidity: function isApprovedForAll(address owner, address operator) view returns(bool)
 func (_ERC721 *ERC721Session) IsApprovedForAll(owner common.Address, operator common.Address) (bool, error) {
 	return _ERC721.Contract.IsApprovedForAll(&_ERC721.CallOpts, owner, operator)
 }
 
-// IsApprovedForAll is a free data retrieval call binding the contract method 0xe985e9c5.
+// IsApprovedForAll is a free data retrieval call binding the service method 0xe985e9c5.
 //
 // Solidity: function isApprovedForAll(address owner, address operator) view returns(bool)
 func (_ERC721 *ERC721CallerSession) IsApprovedForAll(owner common.Address, operator common.Address) (bool, error) {
 	return _ERC721.Contract.IsApprovedForAll(&_ERC721.CallOpts, owner, operator)
 }
 
-// Name is a free data retrieval call binding the contract method 0x06fdde03.
+// Name is a free data retrieval call binding the service method 0x06fdde03.
 //
 // Solidity: function name() view returns(string)
 func (_ERC721 *ERC721Caller) Name(opts *bind.CallOpts) (string, error) {
@@ -289,21 +289,21 @@ func (_ERC721 *ERC721Caller) Name(opts *bind.CallOpts) (string, error) {
 
 }
 
-// Name is a free data retrieval call binding the contract method 0x06fdde03.
+// Name is a free data retrieval call binding the service method 0x06fdde03.
 //
 // Solidity: function name() view returns(string)
 func (_ERC721 *ERC721Session) Name() (string, error) {
 	return _ERC721.Contract.Name(&_ERC721.CallOpts)
 }
 
-// Name is a free data retrieval call binding the contract method 0x06fdde03.
+// Name is a free data retrieval call binding the service method 0x06fdde03.
 //
 // Solidity: function name() view returns(string)
 func (_ERC721 *ERC721CallerSession) Name() (string, error) {
 	return _ERC721.Contract.Name(&_ERC721.CallOpts)
 }
 
-// OwnerOf is a free data retrieval call binding the contract method 0x6352211e.
+// OwnerOf is a free data retrieval call binding the service method 0x6352211e.
 //
 // Solidity: function ownerOf(uint256 tokenId) view returns(address)
 func (_ERC721 *ERC721Caller) OwnerOf(opts *bind.CallOpts, tokenId *big.Int) (common.Address, error) {
@@ -320,21 +320,21 @@ func (_ERC721 *ERC721Caller) OwnerOf(opts *bind.CallOpts, tokenId *big.Int) (com
 
 }
 
-// OwnerOf is a free data retrieval call binding the contract method 0x6352211e.
+// OwnerOf is a free data retrieval call binding the service method 0x6352211e.
 //
 // Solidity: function ownerOf(uint256 tokenId) view returns(address)
 func (_ERC721 *ERC721Session) OwnerOf(tokenId *big.Int) (common.Address, error) {
 	return _ERC721.Contract.OwnerOf(&_ERC721.CallOpts, tokenId)
 }
 
-// OwnerOf is a free data retrieval call binding the contract method 0x6352211e.
+// OwnerOf is a free data retrieval call binding the service method 0x6352211e.
 //
 // Solidity: function ownerOf(uint256 tokenId) view returns(address)
 func (_ERC721 *ERC721CallerSession) OwnerOf(tokenId *big.Int) (common.Address, error) {
 	return _ERC721.Contract.OwnerOf(&_ERC721.CallOpts, tokenId)
 }
 
-// SupportsInterface is a free data retrieval call binding the contract method 0x01ffc9a7.
+// SupportsInterface is a free data retrieval call binding the service method 0x01ffc9a7.
 //
 // Solidity: function supportsInterface(bytes4 interfaceId) view returns(bool)
 func (_ERC721 *ERC721Caller) SupportsInterface(opts *bind.CallOpts, interfaceId [4]byte) (bool, error) {
@@ -351,21 +351,21 @@ func (_ERC721 *ERC721Caller) SupportsInterface(opts *bind.CallOpts, interfaceId 
 
 }
 
-// SupportsInterface is a free data retrieval call binding the contract method 0x01ffc9a7.
+// SupportsInterface is a free data retrieval call binding the service method 0x01ffc9a7.
 //
 // Solidity: function supportsInterface(bytes4 interfaceId) view returns(bool)
 func (_ERC721 *ERC721Session) SupportsInterface(interfaceId [4]byte) (bool, error) {
 	return _ERC721.Contract.SupportsInterface(&_ERC721.CallOpts, interfaceId)
 }
 
-// SupportsInterface is a free data retrieval call binding the contract method 0x01ffc9a7.
+// SupportsInterface is a free data retrieval call binding the service method 0x01ffc9a7.
 //
 // Solidity: function supportsInterface(bytes4 interfaceId) view returns(bool)
 func (_ERC721 *ERC721CallerSession) SupportsInterface(interfaceId [4]byte) (bool, error) {
 	return _ERC721.Contract.SupportsInterface(&_ERC721.CallOpts, interfaceId)
 }
 
-// Symbol is a free data retrieval call binding the contract method 0x95d89b41.
+// Symbol is a free data retrieval call binding the service method 0x95d89b41.
 //
 // Solidity: function symbol() view returns(string)
 func (_ERC721 *ERC721Caller) Symbol(opts *bind.CallOpts) (string, error) {
@@ -382,21 +382,21 @@ func (_ERC721 *ERC721Caller) Symbol(opts *bind.CallOpts) (string, error) {
 
 }
 
-// Symbol is a free data retrieval call binding the contract method 0x95d89b41.
+// Symbol is a free data retrieval call binding the service method 0x95d89b41.
 //
 // Solidity: function symbol() view returns(string)
 func (_ERC721 *ERC721Session) Symbol() (string, error) {
 	return _ERC721.Contract.Symbol(&_ERC721.CallOpts)
 }
 
-// Symbol is a free data retrieval call binding the contract method 0x95d89b41.
+// Symbol is a free data retrieval call binding the service method 0x95d89b41.
 //
 // Solidity: function symbol() view returns(string)
 func (_ERC721 *ERC721CallerSession) Symbol() (string, error) {
 	return _ERC721.Contract.Symbol(&_ERC721.CallOpts)
 }
 
-// TokenURI is a free data retrieval call binding the contract method 0xc87b56dd.
+// TokenURI is a free data retrieval call binding the service method 0xc87b56dd.
 //
 // Solidity: function tokenURI(uint256 tokenId) view returns(string)
 func (_ERC721 *ERC721Caller) TokenURI(opts *bind.CallOpts, tokenId *big.Int) (string, error) {
@@ -413,128 +413,128 @@ func (_ERC721 *ERC721Caller) TokenURI(opts *bind.CallOpts, tokenId *big.Int) (st
 
 }
 
-// TokenURI is a free data retrieval call binding the contract method 0xc87b56dd.
+// TokenURI is a free data retrieval call binding the service method 0xc87b56dd.
 //
 // Solidity: function tokenURI(uint256 tokenId) view returns(string)
 func (_ERC721 *ERC721Session) TokenURI(tokenId *big.Int) (string, error) {
 	return _ERC721.Contract.TokenURI(&_ERC721.CallOpts, tokenId)
 }
 
-// TokenURI is a free data retrieval call binding the contract method 0xc87b56dd.
+// TokenURI is a free data retrieval call binding the service method 0xc87b56dd.
 //
 // Solidity: function tokenURI(uint256 tokenId) view returns(string)
 func (_ERC721 *ERC721CallerSession) TokenURI(tokenId *big.Int) (string, error) {
 	return _ERC721.Contract.TokenURI(&_ERC721.CallOpts, tokenId)
 }
 
-// Approve is a paid mutator transaction binding the contract method 0x095ea7b3.
+// Approve is a paid mutator transaction binding the service method 0x095ea7b3.
 //
 // Solidity: function approve(address to, uint256 tokenId) returns()
 func (_ERC721 *ERC721Transactor) Approve(opts *bind.TransactOpts, to common.Address, tokenId *big.Int) (*types.Transaction, error) {
 	return _ERC721.contract.Transact(opts, "approve", to, tokenId)
 }
 
-// Approve is a paid mutator transaction binding the contract method 0x095ea7b3.
+// Approve is a paid mutator transaction binding the service method 0x095ea7b3.
 //
 // Solidity: function approve(address to, uint256 tokenId) returns()
 func (_ERC721 *ERC721Session) Approve(to common.Address, tokenId *big.Int) (*types.Transaction, error) {
 	return _ERC721.Contract.Approve(&_ERC721.TransactOpts, to, tokenId)
 }
 
-// Approve is a paid mutator transaction binding the contract method 0x095ea7b3.
+// Approve is a paid mutator transaction binding the service method 0x095ea7b3.
 //
 // Solidity: function approve(address to, uint256 tokenId) returns()
 func (_ERC721 *ERC721TransactorSession) Approve(to common.Address, tokenId *big.Int) (*types.Transaction, error) {
 	return _ERC721.Contract.Approve(&_ERC721.TransactOpts, to, tokenId)
 }
 
-// SafeTransferFrom is a paid mutator transaction binding the contract method 0x42842e0e.
+// SafeTransferFrom is a paid mutator transaction binding the service method 0x42842e0e.
 //
 // Solidity: function safeTransferFrom(address from, address to, uint256 tokenId) returns()
 func (_ERC721 *ERC721Transactor) SafeTransferFrom(opts *bind.TransactOpts, from common.Address, to common.Address, tokenId *big.Int) (*types.Transaction, error) {
 	return _ERC721.contract.Transact(opts, "safeTransferFrom", from, to, tokenId)
 }
 
-// SafeTransferFrom is a paid mutator transaction binding the contract method 0x42842e0e.
+// SafeTransferFrom is a paid mutator transaction binding the service method 0x42842e0e.
 //
 // Solidity: function safeTransferFrom(address from, address to, uint256 tokenId) returns()
 func (_ERC721 *ERC721Session) SafeTransferFrom(from common.Address, to common.Address, tokenId *big.Int) (*types.Transaction, error) {
 	return _ERC721.Contract.SafeTransferFrom(&_ERC721.TransactOpts, from, to, tokenId)
 }
 
-// SafeTransferFrom is a paid mutator transaction binding the contract method 0x42842e0e.
+// SafeTransferFrom is a paid mutator transaction binding the service method 0x42842e0e.
 //
 // Solidity: function safeTransferFrom(address from, address to, uint256 tokenId) returns()
 func (_ERC721 *ERC721TransactorSession) SafeTransferFrom(from common.Address, to common.Address, tokenId *big.Int) (*types.Transaction, error) {
 	return _ERC721.Contract.SafeTransferFrom(&_ERC721.TransactOpts, from, to, tokenId)
 }
 
-// SafeTransferFrom0 is a paid mutator transaction binding the contract method 0xb88d4fde.
+// SafeTransferFrom0 is a paid mutator transaction binding the service method 0xb88d4fde.
 //
 // Solidity: function safeTransferFrom(address from, address to, uint256 tokenId, bytes data) returns()
 func (_ERC721 *ERC721Transactor) SafeTransferFrom0(opts *bind.TransactOpts, from common.Address, to common.Address, tokenId *big.Int, data []byte) (*types.Transaction, error) {
 	return _ERC721.contract.Transact(opts, "safeTransferFrom0", from, to, tokenId, data)
 }
 
-// SafeTransferFrom0 is a paid mutator transaction binding the contract method 0xb88d4fde.
+// SafeTransferFrom0 is a paid mutator transaction binding the service method 0xb88d4fde.
 //
 // Solidity: function safeTransferFrom(address from, address to, uint256 tokenId, bytes data) returns()
 func (_ERC721 *ERC721Session) SafeTransferFrom0(from common.Address, to common.Address, tokenId *big.Int, data []byte) (*types.Transaction, error) {
 	return _ERC721.Contract.SafeTransferFrom0(&_ERC721.TransactOpts, from, to, tokenId, data)
 }
 
-// SafeTransferFrom0 is a paid mutator transaction binding the contract method 0xb88d4fde.
+// SafeTransferFrom0 is a paid mutator transaction binding the service method 0xb88d4fde.
 //
 // Solidity: function safeTransferFrom(address from, address to, uint256 tokenId, bytes data) returns()
 func (_ERC721 *ERC721TransactorSession) SafeTransferFrom0(from common.Address, to common.Address, tokenId *big.Int, data []byte) (*types.Transaction, error) {
 	return _ERC721.Contract.SafeTransferFrom0(&_ERC721.TransactOpts, from, to, tokenId, data)
 }
 
-// SetApprovalForAll is a paid mutator transaction binding the contract method 0xa22cb465.
+// SetApprovalForAll is a paid mutator transaction binding the service method 0xa22cb465.
 //
 // Solidity: function setApprovalForAll(address operator, bool approved) returns()
 func (_ERC721 *ERC721Transactor) SetApprovalForAll(opts *bind.TransactOpts, operator common.Address, approved bool) (*types.Transaction, error) {
 	return _ERC721.contract.Transact(opts, "setApprovalForAll", operator, approved)
 }
 
-// SetApprovalForAll is a paid mutator transaction binding the contract method 0xa22cb465.
+// SetApprovalForAll is a paid mutator transaction binding the service method 0xa22cb465.
 //
 // Solidity: function setApprovalForAll(address operator, bool approved) returns()
 func (_ERC721 *ERC721Session) SetApprovalForAll(operator common.Address, approved bool) (*types.Transaction, error) {
 	return _ERC721.Contract.SetApprovalForAll(&_ERC721.TransactOpts, operator, approved)
 }
 
-// SetApprovalForAll is a paid mutator transaction binding the contract method 0xa22cb465.
+// SetApprovalForAll is a paid mutator transaction binding the service method 0xa22cb465.
 //
 // Solidity: function setApprovalForAll(address operator, bool approved) returns()
 func (_ERC721 *ERC721TransactorSession) SetApprovalForAll(operator common.Address, approved bool) (*types.Transaction, error) {
 	return _ERC721.Contract.SetApprovalForAll(&_ERC721.TransactOpts, operator, approved)
 }
 
-// TransferFrom is a paid mutator transaction binding the contract method 0x23b872dd.
+// TransferFrom is a paid mutator transaction binding the service method 0x23b872dd.
 //
 // Solidity: function transferFrom(address from, address to, uint256 tokenId) returns()
 func (_ERC721 *ERC721Transactor) TransferFrom(opts *bind.TransactOpts, from common.Address, to common.Address, tokenId *big.Int) (*types.Transaction, error) {
 	return _ERC721.contract.Transact(opts, "transferFrom", from, to, tokenId)
 }
 
-// TransferFrom is a paid mutator transaction binding the contract method 0x23b872dd.
+// TransferFrom is a paid mutator transaction binding the service method 0x23b872dd.
 //
 // Solidity: function transferFrom(address from, address to, uint256 tokenId) returns()
 func (_ERC721 *ERC721Session) TransferFrom(from common.Address, to common.Address, tokenId *big.Int) (*types.Transaction, error) {
 	return _ERC721.Contract.TransferFrom(&_ERC721.TransactOpts, from, to, tokenId)
 }
 
-// TransferFrom is a paid mutator transaction binding the contract method 0x23b872dd.
+// TransferFrom is a paid mutator transaction binding the service method 0x23b872dd.
 //
 // Solidity: function transferFrom(address from, address to, uint256 tokenId) returns()
 func (_ERC721 *ERC721TransactorSession) TransferFrom(from common.Address, to common.Address, tokenId *big.Int) (*types.Transaction, error) {
 	return _ERC721.Contract.TransferFrom(&_ERC721.TransactOpts, from, to, tokenId)
 }
 
-// ERC721ApprovalIterator is returned from FilterApproval and is used to iterate over the raw logs and unpacked data for Approval events raised by the ERC721 contract.
+// ERC721ApprovalIterator is returned from FilterApproval and is used to iterate over the raw logs and unpacked data for Approval events raised by the ERC721 service.
 type ERC721ApprovalIterator struct {
-	Event *ERC721Approval // Event containing the contract specifics and raw log
+	Event *ERC721Approval // Event containing the service specifics and raw log
 
 	contract *bind.BoundContract // Generic contract to use for unpacking event data
 	event    string              // Event name to use for unpacking event data
@@ -599,7 +599,7 @@ func (it *ERC721ApprovalIterator) Close() error {
 	return nil
 }
 
-// ERC721Approval represents a Approval event raised by the ERC721 contract.
+// ERC721Approval represents a Approval event raised by the ERC721 service.
 type ERC721Approval struct {
 	Owner    common.Address
 	Approved common.Address
@@ -607,7 +607,7 @@ type ERC721Approval struct {
 	Raw      types.Log // Blockchain specific contextual infos
 }
 
-// FilterApproval is a free log retrieval operation binding the contract event 0x8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925.
+// FilterApproval is a free log retrieval operation binding the service event 0x8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925.
 //
 // Solidity: event Approval(address indexed owner, address indexed approved, uint256 indexed tokenId)
 func (_ERC721 *ERC721Filterer) FilterApproval(opts *bind.FilterOpts, owner []common.Address, approved []common.Address, tokenId []*big.Int) (*ERC721ApprovalIterator, error) {
@@ -632,7 +632,7 @@ func (_ERC721 *ERC721Filterer) FilterApproval(opts *bind.FilterOpts, owner []com
 	return &ERC721ApprovalIterator{contract: _ERC721.contract, event: "Approval", logs: logs, sub: sub}, nil
 }
 
-// WatchApproval is a free log subscription operation binding the contract event 0x8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925.
+// WatchApproval is a free log subscription operation binding the service event 0x8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925.
 //
 // Solidity: event Approval(address indexed owner, address indexed approved, uint256 indexed tokenId)
 func (_ERC721 *ERC721Filterer) WatchApproval(opts *bind.WatchOpts, sink chan<- *ERC721Approval, owner []common.Address, approved []common.Address, tokenId []*big.Int) (event.Subscription, error) {
@@ -682,7 +682,7 @@ func (_ERC721 *ERC721Filterer) WatchApproval(opts *bind.WatchOpts, sink chan<- *
 	}), nil
 }
 
-// ParseApproval is a log parse operation binding the contract event 0x8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925.
+// ParseApproval is a log parse operation binding the service event 0x8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925.
 //
 // Solidity: event Approval(address indexed owner, address indexed approved, uint256 indexed tokenId)
 func (_ERC721 *ERC721Filterer) ParseApproval(log types.Log) (*ERC721Approval, error) {
@@ -694,9 +694,9 @@ func (_ERC721 *ERC721Filterer) ParseApproval(log types.Log) (*ERC721Approval, er
 	return event, nil
 }
 
-// ERC721ApprovalForAllIterator is returned from FilterApprovalForAll and is used to iterate over the raw logs and unpacked data for ApprovalForAll events raised by the ERC721 contract.
+// ERC721ApprovalForAllIterator is returned from FilterApprovalForAll and is used to iterate over the raw logs and unpacked data for ApprovalForAll events raised by the ERC721 service.
 type ERC721ApprovalForAllIterator struct {
-	Event *ERC721ApprovalForAll // Event containing the contract specifics and raw log
+	Event *ERC721ApprovalForAll // Event containing the service specifics and raw log
 
 	contract *bind.BoundContract // Generic contract to use for unpacking event data
 	event    string              // Event name to use for unpacking event data
@@ -761,7 +761,7 @@ func (it *ERC721ApprovalForAllIterator) Close() error {
 	return nil
 }
 
-// ERC721ApprovalForAll represents a ApprovalForAll event raised by the ERC721 contract.
+// ERC721ApprovalForAll represents a ApprovalForAll event raised by the ERC721 service.
 type ERC721ApprovalForAll struct {
 	Owner    common.Address
 	Operator common.Address
@@ -769,7 +769,7 @@ type ERC721ApprovalForAll struct {
 	Raw      types.Log // Blockchain specific contextual infos
 }
 
-// FilterApprovalForAll is a free log retrieval operation binding the contract event 0x17307eab39ab6107e8899845ad3d59bd9653f200f220920489ca2b5937696c31.
+// FilterApprovalForAll is a free log retrieval operation binding the service event 0x17307eab39ab6107e8899845ad3d59bd9653f200f220920489ca2b5937696c31.
 //
 // Solidity: event ApprovalForAll(address indexed owner, address indexed operator, bool approved)
 func (_ERC721 *ERC721Filterer) FilterApprovalForAll(opts *bind.FilterOpts, owner []common.Address, operator []common.Address) (*ERC721ApprovalForAllIterator, error) {
@@ -790,7 +790,7 @@ func (_ERC721 *ERC721Filterer) FilterApprovalForAll(opts *bind.FilterOpts, owner
 	return &ERC721ApprovalForAllIterator{contract: _ERC721.contract, event: "ApprovalForAll", logs: logs, sub: sub}, nil
 }
 
-// WatchApprovalForAll is a free log subscription operation binding the contract event 0x17307eab39ab6107e8899845ad3d59bd9653f200f220920489ca2b5937696c31.
+// WatchApprovalForAll is a free log subscription operation binding the service event 0x17307eab39ab6107e8899845ad3d59bd9653f200f220920489ca2b5937696c31.
 //
 // Solidity: event ApprovalForAll(address indexed owner, address indexed operator, bool approved)
 func (_ERC721 *ERC721Filterer) WatchApprovalForAll(opts *bind.WatchOpts, sink chan<- *ERC721ApprovalForAll, owner []common.Address, operator []common.Address) (event.Subscription, error) {
@@ -836,7 +836,7 @@ func (_ERC721 *ERC721Filterer) WatchApprovalForAll(opts *bind.WatchOpts, sink ch
 	}), nil
 }
 
-// ParseApprovalForAll is a log parse operation binding the contract event 0x17307eab39ab6107e8899845ad3d59bd9653f200f220920489ca2b5937696c31.
+// ParseApprovalForAll is a log parse operation binding the service event 0x17307eab39ab6107e8899845ad3d59bd9653f200f220920489ca2b5937696c31.
 //
 // Solidity: event ApprovalForAll(address indexed owner, address indexed operator, bool approved)
 func (_ERC721 *ERC721Filterer) ParseApprovalForAll(log types.Log) (*ERC721ApprovalForAll, error) {
@@ -848,9 +848,9 @@ func (_ERC721 *ERC721Filterer) ParseApprovalForAll(log types.Log) (*ERC721Approv
 	return event, nil
 }
 
-// ERC721TransferIterator is returned from FilterTransfer and is used to iterate over the raw logs and unpacked data for Transfer events raised by the ERC721 contract.
+// ERC721TransferIterator is returned from FilterTransfer and is used to iterate over the raw logs and unpacked data for Transfer events raised by the ERC721 service.
 type ERC721TransferIterator struct {
-	Event *ERC721Transfer // Event containing the contract specifics and raw log
+	Event *ERC721Transfer // Event containing the service specifics and raw log
 
 	contract *bind.BoundContract // Generic contract to use for unpacking event data
 	event    string              // Event name to use for unpacking event data
@@ -915,7 +915,7 @@ func (it *ERC721TransferIterator) Close() error {
 	return nil
 }
 
-// ERC721Transfer represents a Transfer event raised by the ERC721 contract.
+// ERC721Transfer represents a Transfer event raised by the ERC721 service.
 type ERC721Transfer struct {
 	From    common.Address
 	To      common.Address
@@ -923,7 +923,7 @@ type ERC721Transfer struct {
 	Raw     types.Log // Blockchain specific contextual infos
 }
 
-// FilterTransfer is a free log retrieval operation binding the contract event 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef.
+// FilterTransfer is a free log retrieval operation binding the service event 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef.
 //
 // Solidity: event Transfer(address indexed from, address indexed to, uint256 indexed tokenId)
 func (_ERC721 *ERC721Filterer) FilterTransfer(opts *bind.FilterOpts, from []common.Address, to []common.Address, tokenId []*big.Int) (*ERC721TransferIterator, error) {
@@ -948,7 +948,7 @@ func (_ERC721 *ERC721Filterer) FilterTransfer(opts *bind.FilterOpts, from []comm
 	return &ERC721TransferIterator{contract: _ERC721.contract, event: "Transfer", logs: logs, sub: sub}, nil
 }
 
-// WatchTransfer is a free log subscription operation binding the contract event 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef.
+// WatchTransfer is a free log subscription operation binding the service event 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef.
 //
 // Solidity: event Transfer(address indexed from, address indexed to, uint256 indexed tokenId)
 func (_ERC721 *ERC721Filterer) WatchTransfer(opts *bind.WatchOpts, sink chan<- *ERC721Transfer, from []common.Address, to []common.Address, tokenId []*big.Int) (event.Subscription, error) {
@@ -998,7 +998,7 @@ func (_ERC721 *ERC721Filterer) WatchTransfer(opts *bind.WatchOpts, sink chan<- *
 	}), nil
 }
 
-// ParseTransfer is a log parse operation binding the contract event 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef.
+// ParseTransfer is a log parse operation binding the service event 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef.
 //
 // Solidity: event Transfer(address indexed from, address indexed to, uint256 indexed tokenId)
 func (_ERC721 *ERC721Filterer) ParseTransfer(log types.Log) (*ERC721Transfer, error) {

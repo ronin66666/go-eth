@@ -28,7 +28,7 @@ var (
 	_ = event.NewSubscription
 )
 
-// ERC777MetaData contains all meta data concerning the ERC777 contract.
+// ERC777MetaData contains all meta data concerning the ERC777 service.
 var ERC777MetaData = &bind.MetaData{
 	ABI: "[{\"inputs\":[{\"internalType\":\"string\",\"name\":\"name_\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"symbol_\",\"type\":\"string\"},{\"internalType\":\"address[]\",\"name\":\"defaultOperators_\",\"type\":\"address[]\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"spender\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"value\",\"type\":\"uint256\"}],\"name\":\"Approval\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"operator\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"tokenHolder\",\"type\":\"address\"}],\"name\":\"AuthorizedOperator\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"operator\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"},{\"indexed\":false,\"internalType\":\"bytes\",\"name\":\"operatorData\",\"type\":\"bytes\"}],\"name\":\"Burned\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"operator\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"},{\"indexed\":false,\"internalType\":\"bytes\",\"name\":\"operatorData\",\"type\":\"bytes\"}],\"name\":\"Minted\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"operator\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"tokenHolder\",\"type\":\"address\"}],\"name\":\"RevokedOperator\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"operator\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"},{\"indexed\":false,\"internalType\":\"bytes\",\"name\":\"operatorData\",\"type\":\"bytes\"}],\"name\":\"Sent\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"value\",\"type\":\"uint256\"}],\"name\":\"Transfer\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"holder\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"spender\",\"type\":\"address\"}],\"name\":\"allowance\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"spender\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"value\",\"type\":\"uint256\"}],\"name\":\"approve\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"operator\",\"type\":\"address\"}],\"name\":\"authorizeOperator\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"tokenHolder\",\"type\":\"address\"}],\"name\":\"balanceOf\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"name\":\"burn\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"decimals\",\"outputs\":[{\"internalType\":\"uint8\",\"name\":\"\",\"type\":\"uint8\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"defaultOperators\",\"outputs\":[{\"internalType\":\"address[]\",\"name\":\"\",\"type\":\"address[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"granularity\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"operator\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"tokenHolder\",\"type\":\"address\"}],\"name\":\"isOperatorFor\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"name\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"},{\"internalType\":\"bytes\",\"name\":\"operatorData\",\"type\":\"bytes\"}],\"name\":\"operatorBurn\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"sender\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"recipient\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"},{\"internalType\":\"bytes\",\"name\":\"operatorData\",\"type\":\"bytes\"}],\"name\":\"operatorSend\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"operator\",\"type\":\"address\"}],\"name\":\"revokeOperator\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"recipient\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"name\":\"send\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"symbol\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"totalSupply\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"recipient\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"transfer\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"holder\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"recipient\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"transferFrom\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}]",
 }
@@ -37,66 +37,66 @@ var ERC777MetaData = &bind.MetaData{
 // Deprecated: Use ERC777MetaData.ABI instead.
 var ERC777ABI = ERC777MetaData.ABI
 
-// ERC777 is an auto generated Go binding around an Ethereum contract.
+// ERC777 is an auto generated Go binding around an Ethereum service.
 type ERC777 struct {
-	ERC777Caller     // Read-only binding to the contract
-	ERC777Transactor // Write-only binding to the contract
-	ERC777Filterer   // Log filterer for contract events
+	ERC777Caller     // Read-only binding to the service
+	ERC777Transactor // Write-only binding to the service
+	ERC777Filterer   // Log filterer for service events
 }
 
-// ERC777Caller is an auto generated read-only Go binding around an Ethereum contract.
+// ERC777Caller is an auto generated read-only Go binding around an Ethereum service.
 type ERC777Caller struct {
 	contract *bind.BoundContract // Generic contract wrapper for the low level calls
 }
 
-// ERC777Transactor is an auto generated write-only Go binding around an Ethereum contract.
+// ERC777Transactor is an auto generated write-only Go binding around an Ethereum service.
 type ERC777Transactor struct {
 	contract *bind.BoundContract // Generic contract wrapper for the low level calls
 }
 
-// ERC777Filterer is an auto generated log filtering Go binding around an Ethereum contract events.
+// ERC777Filterer is an auto generated log filtering Go binding around an Ethereum service events.
 type ERC777Filterer struct {
 	contract *bind.BoundContract // Generic contract wrapper for the low level calls
 }
 
-// ERC777Session is an auto generated Go binding around an Ethereum contract,
+// ERC777Session is an auto generated Go binding around an Ethereum service,
 // with pre-set call and transact options.
 type ERC777Session struct {
-	Contract     *ERC777           // Generic contract binding to set the session for
+	Contract     *ERC777           // Generic service binding to set the session for
 	CallOpts     bind.CallOpts     // Call options to use throughout this session
 	TransactOpts bind.TransactOpts // Transaction auth options to use throughout this session
 }
 
-// ERC777CallerSession is an auto generated read-only Go binding around an Ethereum contract,
+// ERC777CallerSession is an auto generated read-only Go binding around an Ethereum service,
 // with pre-set call options.
 type ERC777CallerSession struct {
-	Contract *ERC777Caller // Generic contract caller binding to set the session for
+	Contract *ERC777Caller // Generic service caller binding to set the session for
 	CallOpts bind.CallOpts // Call options to use throughout this session
 }
 
-// ERC777TransactorSession is an auto generated write-only Go binding around an Ethereum contract,
+// ERC777TransactorSession is an auto generated write-only Go binding around an Ethereum service,
 // with pre-set transact options.
 type ERC777TransactorSession struct {
-	Contract     *ERC777Transactor // Generic contract transactor binding to set the session for
+	Contract     *ERC777Transactor // Generic service transactor binding to set the session for
 	TransactOpts bind.TransactOpts // Transaction auth options to use throughout this session
 }
 
-// ERC777Raw is an auto generated low-level Go binding around an Ethereum contract.
+// ERC777Raw is an auto generated low-level Go binding around an Ethereum service.
 type ERC777Raw struct {
-	Contract *ERC777 // Generic contract binding to access the raw methods on
+	Contract *ERC777 // Generic service binding to access the raw methods on
 }
 
-// ERC777CallerRaw is an auto generated low-level read-only Go binding around an Ethereum contract.
+// ERC777CallerRaw is an auto generated low-level read-only Go binding around an Ethereum service.
 type ERC777CallerRaw struct {
-	Contract *ERC777Caller // Generic read-only contract binding to access the raw methods on
+	Contract *ERC777Caller // Generic read-only service binding to access the raw methods on
 }
 
-// ERC777TransactorRaw is an auto generated low-level write-only Go binding around an Ethereum contract.
+// ERC777TransactorRaw is an auto generated low-level write-only Go binding around an Ethereum service.
 type ERC777TransactorRaw struct {
-	Contract *ERC777Transactor // Generic write-only contract binding to access the raw methods on
+	Contract *ERC777Transactor // Generic write-only service binding to access the raw methods on
 }
 
-// NewERC777 creates a new instance of ERC777, bound to a specific deployed contract.
+// NewERC777 creates a new instance of ERC777, bound to a specific deployed service.
 func NewERC777(address common.Address, backend bind.ContractBackend) (*ERC777, error) {
 	contract, err := bindERC777(address, backend, backend, backend)
 	if err != nil {
@@ -105,7 +105,7 @@ func NewERC777(address common.Address, backend bind.ContractBackend) (*ERC777, e
 	return &ERC777{ERC777Caller: ERC777Caller{contract: contract}, ERC777Transactor: ERC777Transactor{contract: contract}, ERC777Filterer: ERC777Filterer{contract: contract}}, nil
 }
 
-// NewERC777Caller creates a new read-only instance of ERC777, bound to a specific deployed contract.
+// NewERC777Caller creates a new read-only instance of ERC777, bound to a specific deployed service.
 func NewERC777Caller(address common.Address, caller bind.ContractCaller) (*ERC777Caller, error) {
 	contract, err := bindERC777(address, caller, nil, nil)
 	if err != nil {
@@ -114,7 +114,7 @@ func NewERC777Caller(address common.Address, caller bind.ContractCaller) (*ERC77
 	return &ERC777Caller{contract: contract}, nil
 }
 
-// NewERC777Transactor creates a new write-only instance of ERC777, bound to a specific deployed contract.
+// NewERC777Transactor creates a new write-only instance of ERC777, bound to a specific deployed service.
 func NewERC777Transactor(address common.Address, transactor bind.ContractTransactor) (*ERC777Transactor, error) {
 	contract, err := bindERC777(address, nil, transactor, nil)
 	if err != nil {
@@ -123,7 +123,7 @@ func NewERC777Transactor(address common.Address, transactor bind.ContractTransac
 	return &ERC777Transactor{contract: contract}, nil
 }
 
-// NewERC777Filterer creates a new log filterer instance of ERC777, bound to a specific deployed contract.
+// NewERC777Filterer creates a new log filterer instance of ERC777, bound to a specific deployed service.
 func NewERC777Filterer(address common.Address, filterer bind.ContractFilterer) (*ERC777Filterer, error) {
 	contract, err := bindERC777(address, nil, nil, filterer)
 	if err != nil {
@@ -132,7 +132,7 @@ func NewERC777Filterer(address common.Address, filterer bind.ContractFilterer) (
 	return &ERC777Filterer{contract: contract}, nil
 }
 
-// bindERC777 binds a generic wrapper to an already deployed contract.
+// bindERC777 binds a generic wrapper to an already deployed service.
 func bindERC777(address common.Address, caller bind.ContractCaller, transactor bind.ContractTransactor, filterer bind.ContractFilterer) (*bind.BoundContract, error) {
 	parsed, err := abi.JSON(strings.NewReader(ERC777ABI))
 	if err != nil {
@@ -141,7 +141,7 @@ func bindERC777(address common.Address, caller bind.ContractCaller, transactor b
 	return bind.NewBoundContract(address, parsed, caller, transactor, filterer), nil
 }
 
-// Call invokes the (constant) contract method with params as input values and
+// Call invokes the (constant) service method with params as input values and
 // sets the output to result. The result type might be a single field for simple
 // returns, a slice of interfaces for anonymous returns and a struct for named
 // returns.
@@ -149,18 +149,18 @@ func (_ERC777 *ERC777Raw) Call(opts *bind.CallOpts, result *[]interface{}, metho
 	return _ERC777.Contract.ERC777Caller.contract.Call(opts, result, method, params...)
 }
 
-// Transfer initiates a plain transaction to move funds to the contract, calling
+// Transfer initiates a plain transaction to move funds to the service, calling
 // its default method if one is available.
 func (_ERC777 *ERC777Raw) Transfer(opts *bind.TransactOpts) (*types.Transaction, error) {
 	return _ERC777.Contract.ERC777Transactor.contract.Transfer(opts)
 }
 
-// Transact invokes the (paid) contract method with params as input values.
+// Transact invokes the (paid) service method with params as input values.
 func (_ERC777 *ERC777Raw) Transact(opts *bind.TransactOpts, method string, params ...interface{}) (*types.Transaction, error) {
 	return _ERC777.Contract.ERC777Transactor.contract.Transact(opts, method, params...)
 }
 
-// Call invokes the (constant) contract method with params as input values and
+// Call invokes the (constant) service method with params as input values and
 // sets the output to result. The result type might be a single field for simple
 // returns, a slice of interfaces for anonymous returns and a struct for named
 // returns.
@@ -168,18 +168,18 @@ func (_ERC777 *ERC777CallerRaw) Call(opts *bind.CallOpts, result *[]interface{},
 	return _ERC777.Contract.contract.Call(opts, result, method, params...)
 }
 
-// Transfer initiates a plain transaction to move funds to the contract, calling
+// Transfer initiates a plain transaction to move funds to the service, calling
 // its default method if one is available.
 func (_ERC777 *ERC777TransactorRaw) Transfer(opts *bind.TransactOpts) (*types.Transaction, error) {
 	return _ERC777.Contract.contract.Transfer(opts)
 }
 
-// Transact invokes the (paid) contract method with params as input values.
+// Transact invokes the (paid) service method with params as input values.
 func (_ERC777 *ERC777TransactorRaw) Transact(opts *bind.TransactOpts, method string, params ...interface{}) (*types.Transaction, error) {
 	return _ERC777.Contract.contract.Transact(opts, method, params...)
 }
 
-// Allowance is a free data retrieval call binding the contract method 0xdd62ed3e.
+// Allowance is a free data retrieval call binding the service method 0xdd62ed3e.
 //
 // Solidity: function allowance(address holder, address spender) view returns(uint256)
 func (_ERC777 *ERC777Caller) Allowance(opts *bind.CallOpts, holder common.Address, spender common.Address) (*big.Int, error) {
@@ -196,21 +196,21 @@ func (_ERC777 *ERC777Caller) Allowance(opts *bind.CallOpts, holder common.Addres
 
 }
 
-// Allowance is a free data retrieval call binding the contract method 0xdd62ed3e.
+// Allowance is a free data retrieval call binding the service method 0xdd62ed3e.
 //
 // Solidity: function allowance(address holder, address spender) view returns(uint256)
 func (_ERC777 *ERC777Session) Allowance(holder common.Address, spender common.Address) (*big.Int, error) {
 	return _ERC777.Contract.Allowance(&_ERC777.CallOpts, holder, spender)
 }
 
-// Allowance is a free data retrieval call binding the contract method 0xdd62ed3e.
+// Allowance is a free data retrieval call binding the service method 0xdd62ed3e.
 //
 // Solidity: function allowance(address holder, address spender) view returns(uint256)
 func (_ERC777 *ERC777CallerSession) Allowance(holder common.Address, spender common.Address) (*big.Int, error) {
 	return _ERC777.Contract.Allowance(&_ERC777.CallOpts, holder, spender)
 }
 
-// BalanceOf is a free data retrieval call binding the contract method 0x70a08231.
+// BalanceOf is a free data retrieval call binding the service method 0x70a08231.
 //
 // Solidity: function balanceOf(address tokenHolder) view returns(uint256)
 func (_ERC777 *ERC777Caller) BalanceOf(opts *bind.CallOpts, tokenHolder common.Address) (*big.Int, error) {
@@ -227,21 +227,21 @@ func (_ERC777 *ERC777Caller) BalanceOf(opts *bind.CallOpts, tokenHolder common.A
 
 }
 
-// BalanceOf is a free data retrieval call binding the contract method 0x70a08231.
+// BalanceOf is a free data retrieval call binding the service method 0x70a08231.
 //
 // Solidity: function balanceOf(address tokenHolder) view returns(uint256)
 func (_ERC777 *ERC777Session) BalanceOf(tokenHolder common.Address) (*big.Int, error) {
 	return _ERC777.Contract.BalanceOf(&_ERC777.CallOpts, tokenHolder)
 }
 
-// BalanceOf is a free data retrieval call binding the contract method 0x70a08231.
+// BalanceOf is a free data retrieval call binding the service method 0x70a08231.
 //
 // Solidity: function balanceOf(address tokenHolder) view returns(uint256)
 func (_ERC777 *ERC777CallerSession) BalanceOf(tokenHolder common.Address) (*big.Int, error) {
 	return _ERC777.Contract.BalanceOf(&_ERC777.CallOpts, tokenHolder)
 }
 
-// Decimals is a free data retrieval call binding the contract method 0x313ce567.
+// Decimals is a free data retrieval call binding the service method 0x313ce567.
 //
 // Solidity: function decimals() pure returns(uint8)
 func (_ERC777 *ERC777Caller) Decimals(opts *bind.CallOpts) (uint8, error) {
@@ -258,21 +258,21 @@ func (_ERC777 *ERC777Caller) Decimals(opts *bind.CallOpts) (uint8, error) {
 
 }
 
-// Decimals is a free data retrieval call binding the contract method 0x313ce567.
+// Decimals is a free data retrieval call binding the service method 0x313ce567.
 //
 // Solidity: function decimals() pure returns(uint8)
 func (_ERC777 *ERC777Session) Decimals() (uint8, error) {
 	return _ERC777.Contract.Decimals(&_ERC777.CallOpts)
 }
 
-// Decimals is a free data retrieval call binding the contract method 0x313ce567.
+// Decimals is a free data retrieval call binding the service method 0x313ce567.
 //
 // Solidity: function decimals() pure returns(uint8)
 func (_ERC777 *ERC777CallerSession) Decimals() (uint8, error) {
 	return _ERC777.Contract.Decimals(&_ERC777.CallOpts)
 }
 
-// DefaultOperators is a free data retrieval call binding the contract method 0x06e48538.
+// DefaultOperators is a free data retrieval call binding the service method 0x06e48538.
 //
 // Solidity: function defaultOperators() view returns(address[])
 func (_ERC777 *ERC777Caller) DefaultOperators(opts *bind.CallOpts) ([]common.Address, error) {
@@ -289,21 +289,21 @@ func (_ERC777 *ERC777Caller) DefaultOperators(opts *bind.CallOpts) ([]common.Add
 
 }
 
-// DefaultOperators is a free data retrieval call binding the contract method 0x06e48538.
+// DefaultOperators is a free data retrieval call binding the service method 0x06e48538.
 //
 // Solidity: function defaultOperators() view returns(address[])
 func (_ERC777 *ERC777Session) DefaultOperators() ([]common.Address, error) {
 	return _ERC777.Contract.DefaultOperators(&_ERC777.CallOpts)
 }
 
-// DefaultOperators is a free data retrieval call binding the contract method 0x06e48538.
+// DefaultOperators is a free data retrieval call binding the service method 0x06e48538.
 //
 // Solidity: function defaultOperators() view returns(address[])
 func (_ERC777 *ERC777CallerSession) DefaultOperators() ([]common.Address, error) {
 	return _ERC777.Contract.DefaultOperators(&_ERC777.CallOpts)
 }
 
-// Granularity is a free data retrieval call binding the contract method 0x556f0dc7.
+// Granularity is a free data retrieval call binding the service method 0x556f0dc7.
 //
 // Solidity: function granularity() view returns(uint256)
 func (_ERC777 *ERC777Caller) Granularity(opts *bind.CallOpts) (*big.Int, error) {
@@ -320,21 +320,21 @@ func (_ERC777 *ERC777Caller) Granularity(opts *bind.CallOpts) (*big.Int, error) 
 
 }
 
-// Granularity is a free data retrieval call binding the contract method 0x556f0dc7.
+// Granularity is a free data retrieval call binding the service method 0x556f0dc7.
 //
 // Solidity: function granularity() view returns(uint256)
 func (_ERC777 *ERC777Session) Granularity() (*big.Int, error) {
 	return _ERC777.Contract.Granularity(&_ERC777.CallOpts)
 }
 
-// Granularity is a free data retrieval call binding the contract method 0x556f0dc7.
+// Granularity is a free data retrieval call binding the service method 0x556f0dc7.
 //
 // Solidity: function granularity() view returns(uint256)
 func (_ERC777 *ERC777CallerSession) Granularity() (*big.Int, error) {
 	return _ERC777.Contract.Granularity(&_ERC777.CallOpts)
 }
 
-// IsOperatorFor is a free data retrieval call binding the contract method 0xd95b6371.
+// IsOperatorFor is a free data retrieval call binding the service method 0xd95b6371.
 //
 // Solidity: function isOperatorFor(address operator, address tokenHolder) view returns(bool)
 func (_ERC777 *ERC777Caller) IsOperatorFor(opts *bind.CallOpts, operator common.Address, tokenHolder common.Address) (bool, error) {
@@ -351,21 +351,21 @@ func (_ERC777 *ERC777Caller) IsOperatorFor(opts *bind.CallOpts, operator common.
 
 }
 
-// IsOperatorFor is a free data retrieval call binding the contract method 0xd95b6371.
+// IsOperatorFor is a free data retrieval call binding the service method 0xd95b6371.
 //
 // Solidity: function isOperatorFor(address operator, address tokenHolder) view returns(bool)
 func (_ERC777 *ERC777Session) IsOperatorFor(operator common.Address, tokenHolder common.Address) (bool, error) {
 	return _ERC777.Contract.IsOperatorFor(&_ERC777.CallOpts, operator, tokenHolder)
 }
 
-// IsOperatorFor is a free data retrieval call binding the contract method 0xd95b6371.
+// IsOperatorFor is a free data retrieval call binding the service method 0xd95b6371.
 //
 // Solidity: function isOperatorFor(address operator, address tokenHolder) view returns(bool)
 func (_ERC777 *ERC777CallerSession) IsOperatorFor(operator common.Address, tokenHolder common.Address) (bool, error) {
 	return _ERC777.Contract.IsOperatorFor(&_ERC777.CallOpts, operator, tokenHolder)
 }
 
-// Name is a free data retrieval call binding the contract method 0x06fdde03.
+// Name is a free data retrieval call binding the service method 0x06fdde03.
 //
 // Solidity: function name() view returns(string)
 func (_ERC777 *ERC777Caller) Name(opts *bind.CallOpts) (string, error) {
@@ -382,21 +382,21 @@ func (_ERC777 *ERC777Caller) Name(opts *bind.CallOpts) (string, error) {
 
 }
 
-// Name is a free data retrieval call binding the contract method 0x06fdde03.
+// Name is a free data retrieval call binding the service method 0x06fdde03.
 //
 // Solidity: function name() view returns(string)
 func (_ERC777 *ERC777Session) Name() (string, error) {
 	return _ERC777.Contract.Name(&_ERC777.CallOpts)
 }
 
-// Name is a free data retrieval call binding the contract method 0x06fdde03.
+// Name is a free data retrieval call binding the service method 0x06fdde03.
 //
 // Solidity: function name() view returns(string)
 func (_ERC777 *ERC777CallerSession) Name() (string, error) {
 	return _ERC777.Contract.Name(&_ERC777.CallOpts)
 }
 
-// Symbol is a free data retrieval call binding the contract method 0x95d89b41.
+// Symbol is a free data retrieval call binding the service method 0x95d89b41.
 //
 // Solidity: function symbol() view returns(string)
 func (_ERC777 *ERC777Caller) Symbol(opts *bind.CallOpts) (string, error) {
@@ -413,21 +413,21 @@ func (_ERC777 *ERC777Caller) Symbol(opts *bind.CallOpts) (string, error) {
 
 }
 
-// Symbol is a free data retrieval call binding the contract method 0x95d89b41.
+// Symbol is a free data retrieval call binding the service method 0x95d89b41.
 //
 // Solidity: function symbol() view returns(string)
 func (_ERC777 *ERC777Session) Symbol() (string, error) {
 	return _ERC777.Contract.Symbol(&_ERC777.CallOpts)
 }
 
-// Symbol is a free data retrieval call binding the contract method 0x95d89b41.
+// Symbol is a free data retrieval call binding the service method 0x95d89b41.
 //
 // Solidity: function symbol() view returns(string)
 func (_ERC777 *ERC777CallerSession) Symbol() (string, error) {
 	return _ERC777.Contract.Symbol(&_ERC777.CallOpts)
 }
 
-// TotalSupply is a free data retrieval call binding the contract method 0x18160ddd.
+// TotalSupply is a free data retrieval call binding the service method 0x18160ddd.
 //
 // Solidity: function totalSupply() view returns(uint256)
 func (_ERC777 *ERC777Caller) TotalSupply(opts *bind.CallOpts) (*big.Int, error) {
@@ -444,212 +444,212 @@ func (_ERC777 *ERC777Caller) TotalSupply(opts *bind.CallOpts) (*big.Int, error) 
 
 }
 
-// TotalSupply is a free data retrieval call binding the contract method 0x18160ddd.
+// TotalSupply is a free data retrieval call binding the service method 0x18160ddd.
 //
 // Solidity: function totalSupply() view returns(uint256)
 func (_ERC777 *ERC777Session) TotalSupply() (*big.Int, error) {
 	return _ERC777.Contract.TotalSupply(&_ERC777.CallOpts)
 }
 
-// TotalSupply is a free data retrieval call binding the contract method 0x18160ddd.
+// TotalSupply is a free data retrieval call binding the service method 0x18160ddd.
 //
 // Solidity: function totalSupply() view returns(uint256)
 func (_ERC777 *ERC777CallerSession) TotalSupply() (*big.Int, error) {
 	return _ERC777.Contract.TotalSupply(&_ERC777.CallOpts)
 }
 
-// Approve is a paid mutator transaction binding the contract method 0x095ea7b3.
+// Approve is a paid mutator transaction binding the service method 0x095ea7b3.
 //
 // Solidity: function approve(address spender, uint256 value) returns(bool)
 func (_ERC777 *ERC777Transactor) Approve(opts *bind.TransactOpts, spender common.Address, value *big.Int) (*types.Transaction, error) {
 	return _ERC777.contract.Transact(opts, "approve", spender, value)
 }
 
-// Approve is a paid mutator transaction binding the contract method 0x095ea7b3.
+// Approve is a paid mutator transaction binding the service method 0x095ea7b3.
 //
 // Solidity: function approve(address spender, uint256 value) returns(bool)
 func (_ERC777 *ERC777Session) Approve(spender common.Address, value *big.Int) (*types.Transaction, error) {
 	return _ERC777.Contract.Approve(&_ERC777.TransactOpts, spender, value)
 }
 
-// Approve is a paid mutator transaction binding the contract method 0x095ea7b3.
+// Approve is a paid mutator transaction binding the service method 0x095ea7b3.
 //
 // Solidity: function approve(address spender, uint256 value) returns(bool)
 func (_ERC777 *ERC777TransactorSession) Approve(spender common.Address, value *big.Int) (*types.Transaction, error) {
 	return _ERC777.Contract.Approve(&_ERC777.TransactOpts, spender, value)
 }
 
-// AuthorizeOperator is a paid mutator transaction binding the contract method 0x959b8c3f.
+// AuthorizeOperator is a paid mutator transaction binding the service method 0x959b8c3f.
 //
 // Solidity: function authorizeOperator(address operator) returns()
 func (_ERC777 *ERC777Transactor) AuthorizeOperator(opts *bind.TransactOpts, operator common.Address) (*types.Transaction, error) {
 	return _ERC777.contract.Transact(opts, "authorizeOperator", operator)
 }
 
-// AuthorizeOperator is a paid mutator transaction binding the contract method 0x959b8c3f.
+// AuthorizeOperator is a paid mutator transaction binding the service method 0x959b8c3f.
 //
 // Solidity: function authorizeOperator(address operator) returns()
 func (_ERC777 *ERC777Session) AuthorizeOperator(operator common.Address) (*types.Transaction, error) {
 	return _ERC777.Contract.AuthorizeOperator(&_ERC777.TransactOpts, operator)
 }
 
-// AuthorizeOperator is a paid mutator transaction binding the contract method 0x959b8c3f.
+// AuthorizeOperator is a paid mutator transaction binding the service method 0x959b8c3f.
 //
 // Solidity: function authorizeOperator(address operator) returns()
 func (_ERC777 *ERC777TransactorSession) AuthorizeOperator(operator common.Address) (*types.Transaction, error) {
 	return _ERC777.Contract.AuthorizeOperator(&_ERC777.TransactOpts, operator)
 }
 
-// Burn is a paid mutator transaction binding the contract method 0xfe9d9303.
+// Burn is a paid mutator transaction binding the service method 0xfe9d9303.
 //
 // Solidity: function burn(uint256 amount, bytes data) returns()
 func (_ERC777 *ERC777Transactor) Burn(opts *bind.TransactOpts, amount *big.Int, data []byte) (*types.Transaction, error) {
 	return _ERC777.contract.Transact(opts, "burn", amount, data)
 }
 
-// Burn is a paid mutator transaction binding the contract method 0xfe9d9303.
+// Burn is a paid mutator transaction binding the service method 0xfe9d9303.
 //
 // Solidity: function burn(uint256 amount, bytes data) returns()
 func (_ERC777 *ERC777Session) Burn(amount *big.Int, data []byte) (*types.Transaction, error) {
 	return _ERC777.Contract.Burn(&_ERC777.TransactOpts, amount, data)
 }
 
-// Burn is a paid mutator transaction binding the contract method 0xfe9d9303.
+// Burn is a paid mutator transaction binding the service method 0xfe9d9303.
 //
 // Solidity: function burn(uint256 amount, bytes data) returns()
 func (_ERC777 *ERC777TransactorSession) Burn(amount *big.Int, data []byte) (*types.Transaction, error) {
 	return _ERC777.Contract.Burn(&_ERC777.TransactOpts, amount, data)
 }
 
-// OperatorBurn is a paid mutator transaction binding the contract method 0xfc673c4f.
+// OperatorBurn is a paid mutator transaction binding the service method 0xfc673c4f.
 //
 // Solidity: function operatorBurn(address account, uint256 amount, bytes data, bytes operatorData) returns()
 func (_ERC777 *ERC777Transactor) OperatorBurn(opts *bind.TransactOpts, account common.Address, amount *big.Int, data []byte, operatorData []byte) (*types.Transaction, error) {
 	return _ERC777.contract.Transact(opts, "operatorBurn", account, amount, data, operatorData)
 }
 
-// OperatorBurn is a paid mutator transaction binding the contract method 0xfc673c4f.
+// OperatorBurn is a paid mutator transaction binding the service method 0xfc673c4f.
 //
 // Solidity: function operatorBurn(address account, uint256 amount, bytes data, bytes operatorData) returns()
 func (_ERC777 *ERC777Session) OperatorBurn(account common.Address, amount *big.Int, data []byte, operatorData []byte) (*types.Transaction, error) {
 	return _ERC777.Contract.OperatorBurn(&_ERC777.TransactOpts, account, amount, data, operatorData)
 }
 
-// OperatorBurn is a paid mutator transaction binding the contract method 0xfc673c4f.
+// OperatorBurn is a paid mutator transaction binding the service method 0xfc673c4f.
 //
 // Solidity: function operatorBurn(address account, uint256 amount, bytes data, bytes operatorData) returns()
 func (_ERC777 *ERC777TransactorSession) OperatorBurn(account common.Address, amount *big.Int, data []byte, operatorData []byte) (*types.Transaction, error) {
 	return _ERC777.Contract.OperatorBurn(&_ERC777.TransactOpts, account, amount, data, operatorData)
 }
 
-// OperatorSend is a paid mutator transaction binding the contract method 0x62ad1b83.
+// OperatorSend is a paid mutator transaction binding the service method 0x62ad1b83.
 //
 // Solidity: function operatorSend(address sender, address recipient, uint256 amount, bytes data, bytes operatorData) returns()
 func (_ERC777 *ERC777Transactor) OperatorSend(opts *bind.TransactOpts, sender common.Address, recipient common.Address, amount *big.Int, data []byte, operatorData []byte) (*types.Transaction, error) {
 	return _ERC777.contract.Transact(opts, "operatorSend", sender, recipient, amount, data, operatorData)
 }
 
-// OperatorSend is a paid mutator transaction binding the contract method 0x62ad1b83.
+// OperatorSend is a paid mutator transaction binding the service method 0x62ad1b83.
 //
 // Solidity: function operatorSend(address sender, address recipient, uint256 amount, bytes data, bytes operatorData) returns()
 func (_ERC777 *ERC777Session) OperatorSend(sender common.Address, recipient common.Address, amount *big.Int, data []byte, operatorData []byte) (*types.Transaction, error) {
 	return _ERC777.Contract.OperatorSend(&_ERC777.TransactOpts, sender, recipient, amount, data, operatorData)
 }
 
-// OperatorSend is a paid mutator transaction binding the contract method 0x62ad1b83.
+// OperatorSend is a paid mutator transaction binding the service method 0x62ad1b83.
 //
 // Solidity: function operatorSend(address sender, address recipient, uint256 amount, bytes data, bytes operatorData) returns()
 func (_ERC777 *ERC777TransactorSession) OperatorSend(sender common.Address, recipient common.Address, amount *big.Int, data []byte, operatorData []byte) (*types.Transaction, error) {
 	return _ERC777.Contract.OperatorSend(&_ERC777.TransactOpts, sender, recipient, amount, data, operatorData)
 }
 
-// RevokeOperator is a paid mutator transaction binding the contract method 0xfad8b32a.
+// RevokeOperator is a paid mutator transaction binding the service method 0xfad8b32a.
 //
 // Solidity: function revokeOperator(address operator) returns()
 func (_ERC777 *ERC777Transactor) RevokeOperator(opts *bind.TransactOpts, operator common.Address) (*types.Transaction, error) {
 	return _ERC777.contract.Transact(opts, "revokeOperator", operator)
 }
 
-// RevokeOperator is a paid mutator transaction binding the contract method 0xfad8b32a.
+// RevokeOperator is a paid mutator transaction binding the service method 0xfad8b32a.
 //
 // Solidity: function revokeOperator(address operator) returns()
 func (_ERC777 *ERC777Session) RevokeOperator(operator common.Address) (*types.Transaction, error) {
 	return _ERC777.Contract.RevokeOperator(&_ERC777.TransactOpts, operator)
 }
 
-// RevokeOperator is a paid mutator transaction binding the contract method 0xfad8b32a.
+// RevokeOperator is a paid mutator transaction binding the service method 0xfad8b32a.
 //
 // Solidity: function revokeOperator(address operator) returns()
 func (_ERC777 *ERC777TransactorSession) RevokeOperator(operator common.Address) (*types.Transaction, error) {
 	return _ERC777.Contract.RevokeOperator(&_ERC777.TransactOpts, operator)
 }
 
-// Send is a paid mutator transaction binding the contract method 0x9bd9bbc6.
+// Send is a paid mutator transaction binding the service method 0x9bd9bbc6.
 //
 // Solidity: function send(address recipient, uint256 amount, bytes data) returns()
 func (_ERC777 *ERC777Transactor) Send(opts *bind.TransactOpts, recipient common.Address, amount *big.Int, data []byte) (*types.Transaction, error) {
 	return _ERC777.contract.Transact(opts, "send", recipient, amount, data)
 }
 
-// Send is a paid mutator transaction binding the contract method 0x9bd9bbc6.
+// Send is a paid mutator transaction binding the service method 0x9bd9bbc6.
 //
 // Solidity: function send(address recipient, uint256 amount, bytes data) returns()
 func (_ERC777 *ERC777Session) Send(recipient common.Address, amount *big.Int, data []byte) (*types.Transaction, error) {
 	return _ERC777.Contract.Send(&_ERC777.TransactOpts, recipient, amount, data)
 }
 
-// Send is a paid mutator transaction binding the contract method 0x9bd9bbc6.
+// Send is a paid mutator transaction binding the service method 0x9bd9bbc6.
 //
 // Solidity: function send(address recipient, uint256 amount, bytes data) returns()
 func (_ERC777 *ERC777TransactorSession) Send(recipient common.Address, amount *big.Int, data []byte) (*types.Transaction, error) {
 	return _ERC777.Contract.Send(&_ERC777.TransactOpts, recipient, amount, data)
 }
 
-// Transfer is a paid mutator transaction binding the contract method 0xa9059cbb.
+// Transfer is a paid mutator transaction binding the service method 0xa9059cbb.
 //
 // Solidity: function transfer(address recipient, uint256 amount) returns(bool)
 func (_ERC777 *ERC777Transactor) Transfer(opts *bind.TransactOpts, recipient common.Address, amount *big.Int) (*types.Transaction, error) {
 	return _ERC777.contract.Transact(opts, "transfer", recipient, amount)
 }
 
-// Transfer is a paid mutator transaction binding the contract method 0xa9059cbb.
+// Transfer is a paid mutator transaction binding the service method 0xa9059cbb.
 //
 // Solidity: function transfer(address recipient, uint256 amount) returns(bool)
 func (_ERC777 *ERC777Session) Transfer(recipient common.Address, amount *big.Int) (*types.Transaction, error) {
 	return _ERC777.Contract.Transfer(&_ERC777.TransactOpts, recipient, amount)
 }
 
-// Transfer is a paid mutator transaction binding the contract method 0xa9059cbb.
+// Transfer is a paid mutator transaction binding the service method 0xa9059cbb.
 //
 // Solidity: function transfer(address recipient, uint256 amount) returns(bool)
 func (_ERC777 *ERC777TransactorSession) Transfer(recipient common.Address, amount *big.Int) (*types.Transaction, error) {
 	return _ERC777.Contract.Transfer(&_ERC777.TransactOpts, recipient, amount)
 }
 
-// TransferFrom is a paid mutator transaction binding the contract method 0x23b872dd.
+// TransferFrom is a paid mutator transaction binding the service method 0x23b872dd.
 //
 // Solidity: function transferFrom(address holder, address recipient, uint256 amount) returns(bool)
 func (_ERC777 *ERC777Transactor) TransferFrom(opts *bind.TransactOpts, holder common.Address, recipient common.Address, amount *big.Int) (*types.Transaction, error) {
 	return _ERC777.contract.Transact(opts, "transferFrom", holder, recipient, amount)
 }
 
-// TransferFrom is a paid mutator transaction binding the contract method 0x23b872dd.
+// TransferFrom is a paid mutator transaction binding the service method 0x23b872dd.
 //
 // Solidity: function transferFrom(address holder, address recipient, uint256 amount) returns(bool)
 func (_ERC777 *ERC777Session) TransferFrom(holder common.Address, recipient common.Address, amount *big.Int) (*types.Transaction, error) {
 	return _ERC777.Contract.TransferFrom(&_ERC777.TransactOpts, holder, recipient, amount)
 }
 
-// TransferFrom is a paid mutator transaction binding the contract method 0x23b872dd.
+// TransferFrom is a paid mutator transaction binding the service method 0x23b872dd.
 //
 // Solidity: function transferFrom(address holder, address recipient, uint256 amount) returns(bool)
 func (_ERC777 *ERC777TransactorSession) TransferFrom(holder common.Address, recipient common.Address, amount *big.Int) (*types.Transaction, error) {
 	return _ERC777.Contract.TransferFrom(&_ERC777.TransactOpts, holder, recipient, amount)
 }
 
-// ERC777ApprovalIterator is returned from FilterApproval and is used to iterate over the raw logs and unpacked data for Approval events raised by the ERC777 contract.
+// ERC777ApprovalIterator is returned from FilterApproval and is used to iterate over the raw logs and unpacked data for Approval events raised by the ERC777 service.
 type ERC777ApprovalIterator struct {
-	Event *ERC777Approval // Event containing the contract specifics and raw log
+	Event *ERC777Approval // Event containing the service specifics and raw log
 
 	contract *bind.BoundContract // Generic contract to use for unpacking event data
 	event    string              // Event name to use for unpacking event data
@@ -714,7 +714,7 @@ func (it *ERC777ApprovalIterator) Close() error {
 	return nil
 }
 
-// ERC777Approval represents a Approval event raised by the ERC777 contract.
+// ERC777Approval represents a Approval event raised by the ERC777 service.
 type ERC777Approval struct {
 	Owner   common.Address
 	Spender common.Address
@@ -722,7 +722,7 @@ type ERC777Approval struct {
 	Raw     types.Log // Blockchain specific contextual infos
 }
 
-// FilterApproval is a free log retrieval operation binding the contract event 0x8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925.
+// FilterApproval is a free log retrieval operation binding the service event 0x8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925.
 //
 // Solidity: event Approval(address indexed owner, address indexed spender, uint256 value)
 func (_ERC777 *ERC777Filterer) FilterApproval(opts *bind.FilterOpts, owner []common.Address, spender []common.Address) (*ERC777ApprovalIterator, error) {
@@ -743,7 +743,7 @@ func (_ERC777 *ERC777Filterer) FilterApproval(opts *bind.FilterOpts, owner []com
 	return &ERC777ApprovalIterator{contract: _ERC777.contract, event: "Approval", logs: logs, sub: sub}, nil
 }
 
-// WatchApproval is a free log subscription operation binding the contract event 0x8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925.
+// WatchApproval is a free log subscription operation binding the service event 0x8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925.
 //
 // Solidity: event Approval(address indexed owner, address indexed spender, uint256 value)
 func (_ERC777 *ERC777Filterer) WatchApproval(opts *bind.WatchOpts, sink chan<- *ERC777Approval, owner []common.Address, spender []common.Address) (event.Subscription, error) {
@@ -789,7 +789,7 @@ func (_ERC777 *ERC777Filterer) WatchApproval(opts *bind.WatchOpts, sink chan<- *
 	}), nil
 }
 
-// ParseApproval is a log parse operation binding the contract event 0x8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925.
+// ParseApproval is a log parse operation binding the service event 0x8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925.
 //
 // Solidity: event Approval(address indexed owner, address indexed spender, uint256 value)
 func (_ERC777 *ERC777Filterer) ParseApproval(log types.Log) (*ERC777Approval, error) {
@@ -801,9 +801,9 @@ func (_ERC777 *ERC777Filterer) ParseApproval(log types.Log) (*ERC777Approval, er
 	return event, nil
 }
 
-// ERC777AuthorizedOperatorIterator is returned from FilterAuthorizedOperator and is used to iterate over the raw logs and unpacked data for AuthorizedOperator events raised by the ERC777 contract.
+// ERC777AuthorizedOperatorIterator is returned from FilterAuthorizedOperator and is used to iterate over the raw logs and unpacked data for AuthorizedOperator events raised by the ERC777 service.
 type ERC777AuthorizedOperatorIterator struct {
-	Event *ERC777AuthorizedOperator // Event containing the contract specifics and raw log
+	Event *ERC777AuthorizedOperator // Event containing the service specifics and raw log
 
 	contract *bind.BoundContract // Generic contract to use for unpacking event data
 	event    string              // Event name to use for unpacking event data
@@ -868,14 +868,14 @@ func (it *ERC777AuthorizedOperatorIterator) Close() error {
 	return nil
 }
 
-// ERC777AuthorizedOperator represents a AuthorizedOperator event raised by the ERC777 contract.
+// ERC777AuthorizedOperator represents a AuthorizedOperator event raised by the ERC777 service.
 type ERC777AuthorizedOperator struct {
 	Operator    common.Address
 	TokenHolder common.Address
 	Raw         types.Log // Blockchain specific contextual infos
 }
 
-// FilterAuthorizedOperator is a free log retrieval operation binding the contract event 0xf4caeb2d6ca8932a215a353d0703c326ec2d81fc68170f320eb2ab49e9df61f9.
+// FilterAuthorizedOperator is a free log retrieval operation binding the service event 0xf4caeb2d6ca8932a215a353d0703c326ec2d81fc68170f320eb2ab49e9df61f9.
 //
 // Solidity: event AuthorizedOperator(address indexed operator, address indexed tokenHolder)
 func (_ERC777 *ERC777Filterer) FilterAuthorizedOperator(opts *bind.FilterOpts, operator []common.Address, tokenHolder []common.Address) (*ERC777AuthorizedOperatorIterator, error) {
@@ -896,7 +896,7 @@ func (_ERC777 *ERC777Filterer) FilterAuthorizedOperator(opts *bind.FilterOpts, o
 	return &ERC777AuthorizedOperatorIterator{contract: _ERC777.contract, event: "AuthorizedOperator", logs: logs, sub: sub}, nil
 }
 
-// WatchAuthorizedOperator is a free log subscription operation binding the contract event 0xf4caeb2d6ca8932a215a353d0703c326ec2d81fc68170f320eb2ab49e9df61f9.
+// WatchAuthorizedOperator is a free log subscription operation binding the service event 0xf4caeb2d6ca8932a215a353d0703c326ec2d81fc68170f320eb2ab49e9df61f9.
 //
 // Solidity: event AuthorizedOperator(address indexed operator, address indexed tokenHolder)
 func (_ERC777 *ERC777Filterer) WatchAuthorizedOperator(opts *bind.WatchOpts, sink chan<- *ERC777AuthorizedOperator, operator []common.Address, tokenHolder []common.Address) (event.Subscription, error) {
@@ -942,7 +942,7 @@ func (_ERC777 *ERC777Filterer) WatchAuthorizedOperator(opts *bind.WatchOpts, sin
 	}), nil
 }
 
-// ParseAuthorizedOperator is a log parse operation binding the contract event 0xf4caeb2d6ca8932a215a353d0703c326ec2d81fc68170f320eb2ab49e9df61f9.
+// ParseAuthorizedOperator is a log parse operation binding the service event 0xf4caeb2d6ca8932a215a353d0703c326ec2d81fc68170f320eb2ab49e9df61f9.
 //
 // Solidity: event AuthorizedOperator(address indexed operator, address indexed tokenHolder)
 func (_ERC777 *ERC777Filterer) ParseAuthorizedOperator(log types.Log) (*ERC777AuthorizedOperator, error) {
@@ -954,9 +954,9 @@ func (_ERC777 *ERC777Filterer) ParseAuthorizedOperator(log types.Log) (*ERC777Au
 	return event, nil
 }
 
-// ERC777BurnedIterator is returned from FilterBurned and is used to iterate over the raw logs and unpacked data for Burned events raised by the ERC777 contract.
+// ERC777BurnedIterator is returned from FilterBurned and is used to iterate over the raw logs and unpacked data for Burned events raised by the ERC777 service.
 type ERC777BurnedIterator struct {
-	Event *ERC777Burned // Event containing the contract specifics and raw log
+	Event *ERC777Burned // Event containing the service specifics and raw log
 
 	contract *bind.BoundContract // Generic contract to use for unpacking event data
 	event    string              // Event name to use for unpacking event data
@@ -1021,7 +1021,7 @@ func (it *ERC777BurnedIterator) Close() error {
 	return nil
 }
 
-// ERC777Burned represents a Burned event raised by the ERC777 contract.
+// ERC777Burned represents a Burned event raised by the ERC777 service.
 type ERC777Burned struct {
 	Operator     common.Address
 	From         common.Address
@@ -1031,7 +1031,7 @@ type ERC777Burned struct {
 	Raw          types.Log // Blockchain specific contextual infos
 }
 
-// FilterBurned is a free log retrieval operation binding the contract event 0xa78a9be3a7b862d26933ad85fb11d80ef66b8f972d7cbba06621d583943a4098.
+// FilterBurned is a free log retrieval operation binding the service event 0xa78a9be3a7b862d26933ad85fb11d80ef66b8f972d7cbba06621d583943a4098.
 //
 // Solidity: event Burned(address indexed operator, address indexed from, uint256 amount, bytes data, bytes operatorData)
 func (_ERC777 *ERC777Filterer) FilterBurned(opts *bind.FilterOpts, operator []common.Address, from []common.Address) (*ERC777BurnedIterator, error) {
@@ -1052,7 +1052,7 @@ func (_ERC777 *ERC777Filterer) FilterBurned(opts *bind.FilterOpts, operator []co
 	return &ERC777BurnedIterator{contract: _ERC777.contract, event: "Burned", logs: logs, sub: sub}, nil
 }
 
-// WatchBurned is a free log subscription operation binding the contract event 0xa78a9be3a7b862d26933ad85fb11d80ef66b8f972d7cbba06621d583943a4098.
+// WatchBurned is a free log subscription operation binding the service event 0xa78a9be3a7b862d26933ad85fb11d80ef66b8f972d7cbba06621d583943a4098.
 //
 // Solidity: event Burned(address indexed operator, address indexed from, uint256 amount, bytes data, bytes operatorData)
 func (_ERC777 *ERC777Filterer) WatchBurned(opts *bind.WatchOpts, sink chan<- *ERC777Burned, operator []common.Address, from []common.Address) (event.Subscription, error) {
@@ -1098,7 +1098,7 @@ func (_ERC777 *ERC777Filterer) WatchBurned(opts *bind.WatchOpts, sink chan<- *ER
 	}), nil
 }
 
-// ParseBurned is a log parse operation binding the contract event 0xa78a9be3a7b862d26933ad85fb11d80ef66b8f972d7cbba06621d583943a4098.
+// ParseBurned is a log parse operation binding the service event 0xa78a9be3a7b862d26933ad85fb11d80ef66b8f972d7cbba06621d583943a4098.
 //
 // Solidity: event Burned(address indexed operator, address indexed from, uint256 amount, bytes data, bytes operatorData)
 func (_ERC777 *ERC777Filterer) ParseBurned(log types.Log) (*ERC777Burned, error) {
@@ -1110,9 +1110,9 @@ func (_ERC777 *ERC777Filterer) ParseBurned(log types.Log) (*ERC777Burned, error)
 	return event, nil
 }
 
-// ERC777MintedIterator is returned from FilterMinted and is used to iterate over the raw logs and unpacked data for Minted events raised by the ERC777 contract.
+// ERC777MintedIterator is returned from FilterMinted and is used to iterate over the raw logs and unpacked data for Minted events raised by the ERC777 service.
 type ERC777MintedIterator struct {
-	Event *ERC777Minted // Event containing the contract specifics and raw log
+	Event *ERC777Minted // Event containing the service specifics and raw log
 
 	contract *bind.BoundContract // Generic contract to use for unpacking event data
 	event    string              // Event name to use for unpacking event data
@@ -1177,7 +1177,7 @@ func (it *ERC777MintedIterator) Close() error {
 	return nil
 }
 
-// ERC777Minted represents a Minted event raised by the ERC777 contract.
+// ERC777Minted represents a Minted event raised by the ERC777 service.
 type ERC777Minted struct {
 	Operator     common.Address
 	To           common.Address
@@ -1187,7 +1187,7 @@ type ERC777Minted struct {
 	Raw          types.Log // Blockchain specific contextual infos
 }
 
-// FilterMinted is a free log retrieval operation binding the contract event 0x2fe5be0146f74c5bce36c0b80911af6c7d86ff27e89d5cfa61fc681327954e5d.
+// FilterMinted is a free log retrieval operation binding the service event 0x2fe5be0146f74c5bce36c0b80911af6c7d86ff27e89d5cfa61fc681327954e5d.
 //
 // Solidity: event Minted(address indexed operator, address indexed to, uint256 amount, bytes data, bytes operatorData)
 func (_ERC777 *ERC777Filterer) FilterMinted(opts *bind.FilterOpts, operator []common.Address, to []common.Address) (*ERC777MintedIterator, error) {
@@ -1208,7 +1208,7 @@ func (_ERC777 *ERC777Filterer) FilterMinted(opts *bind.FilterOpts, operator []co
 	return &ERC777MintedIterator{contract: _ERC777.contract, event: "Minted", logs: logs, sub: sub}, nil
 }
 
-// WatchMinted is a free log subscription operation binding the contract event 0x2fe5be0146f74c5bce36c0b80911af6c7d86ff27e89d5cfa61fc681327954e5d.
+// WatchMinted is a free log subscription operation binding the service event 0x2fe5be0146f74c5bce36c0b80911af6c7d86ff27e89d5cfa61fc681327954e5d.
 //
 // Solidity: event Minted(address indexed operator, address indexed to, uint256 amount, bytes data, bytes operatorData)
 func (_ERC777 *ERC777Filterer) WatchMinted(opts *bind.WatchOpts, sink chan<- *ERC777Minted, operator []common.Address, to []common.Address) (event.Subscription, error) {
@@ -1254,7 +1254,7 @@ func (_ERC777 *ERC777Filterer) WatchMinted(opts *bind.WatchOpts, sink chan<- *ER
 	}), nil
 }
 
-// ParseMinted is a log parse operation binding the contract event 0x2fe5be0146f74c5bce36c0b80911af6c7d86ff27e89d5cfa61fc681327954e5d.
+// ParseMinted is a log parse operation binding the service event 0x2fe5be0146f74c5bce36c0b80911af6c7d86ff27e89d5cfa61fc681327954e5d.
 //
 // Solidity: event Minted(address indexed operator, address indexed to, uint256 amount, bytes data, bytes operatorData)
 func (_ERC777 *ERC777Filterer) ParseMinted(log types.Log) (*ERC777Minted, error) {
@@ -1266,9 +1266,9 @@ func (_ERC777 *ERC777Filterer) ParseMinted(log types.Log) (*ERC777Minted, error)
 	return event, nil
 }
 
-// ERC777RevokedOperatorIterator is returned from FilterRevokedOperator and is used to iterate over the raw logs and unpacked data for RevokedOperator events raised by the ERC777 contract.
+// ERC777RevokedOperatorIterator is returned from FilterRevokedOperator and is used to iterate over the raw logs and unpacked data for RevokedOperator events raised by the ERC777 service.
 type ERC777RevokedOperatorIterator struct {
-	Event *ERC777RevokedOperator // Event containing the contract specifics and raw log
+	Event *ERC777RevokedOperator // Event containing the service specifics and raw log
 
 	contract *bind.BoundContract // Generic contract to use for unpacking event data
 	event    string              // Event name to use for unpacking event data
@@ -1333,14 +1333,14 @@ func (it *ERC777RevokedOperatorIterator) Close() error {
 	return nil
 }
 
-// ERC777RevokedOperator represents a RevokedOperator event raised by the ERC777 contract.
+// ERC777RevokedOperator represents a RevokedOperator event raised by the ERC777 service.
 type ERC777RevokedOperator struct {
 	Operator    common.Address
 	TokenHolder common.Address
 	Raw         types.Log // Blockchain specific contextual infos
 }
 
-// FilterRevokedOperator is a free log retrieval operation binding the contract event 0x50546e66e5f44d728365dc3908c63bc5cfeeab470722c1677e3073a6ac294aa1.
+// FilterRevokedOperator is a free log retrieval operation binding the service event 0x50546e66e5f44d728365dc3908c63bc5cfeeab470722c1677e3073a6ac294aa1.
 //
 // Solidity: event RevokedOperator(address indexed operator, address indexed tokenHolder)
 func (_ERC777 *ERC777Filterer) FilterRevokedOperator(opts *bind.FilterOpts, operator []common.Address, tokenHolder []common.Address) (*ERC777RevokedOperatorIterator, error) {
@@ -1361,7 +1361,7 @@ func (_ERC777 *ERC777Filterer) FilterRevokedOperator(opts *bind.FilterOpts, oper
 	return &ERC777RevokedOperatorIterator{contract: _ERC777.contract, event: "RevokedOperator", logs: logs, sub: sub}, nil
 }
 
-// WatchRevokedOperator is a free log subscription operation binding the contract event 0x50546e66e5f44d728365dc3908c63bc5cfeeab470722c1677e3073a6ac294aa1.
+// WatchRevokedOperator is a free log subscription operation binding the service event 0x50546e66e5f44d728365dc3908c63bc5cfeeab470722c1677e3073a6ac294aa1.
 //
 // Solidity: event RevokedOperator(address indexed operator, address indexed tokenHolder)
 func (_ERC777 *ERC777Filterer) WatchRevokedOperator(opts *bind.WatchOpts, sink chan<- *ERC777RevokedOperator, operator []common.Address, tokenHolder []common.Address) (event.Subscription, error) {
@@ -1407,7 +1407,7 @@ func (_ERC777 *ERC777Filterer) WatchRevokedOperator(opts *bind.WatchOpts, sink c
 	}), nil
 }
 
-// ParseRevokedOperator is a log parse operation binding the contract event 0x50546e66e5f44d728365dc3908c63bc5cfeeab470722c1677e3073a6ac294aa1.
+// ParseRevokedOperator is a log parse operation binding the service event 0x50546e66e5f44d728365dc3908c63bc5cfeeab470722c1677e3073a6ac294aa1.
 //
 // Solidity: event RevokedOperator(address indexed operator, address indexed tokenHolder)
 func (_ERC777 *ERC777Filterer) ParseRevokedOperator(log types.Log) (*ERC777RevokedOperator, error) {
@@ -1419,9 +1419,9 @@ func (_ERC777 *ERC777Filterer) ParseRevokedOperator(log types.Log) (*ERC777Revok
 	return event, nil
 }
 
-// ERC777SentIterator is returned from FilterSent and is used to iterate over the raw logs and unpacked data for Sent events raised by the ERC777 contract.
+// ERC777SentIterator is returned from FilterSent and is used to iterate over the raw logs and unpacked data for Sent events raised by the ERC777 service.
 type ERC777SentIterator struct {
-	Event *ERC777Sent // Event containing the contract specifics and raw log
+	Event *ERC777Sent // Event containing the service specifics and raw log
 
 	contract *bind.BoundContract // Generic contract to use for unpacking event data
 	event    string              // Event name to use for unpacking event data
@@ -1486,7 +1486,7 @@ func (it *ERC777SentIterator) Close() error {
 	return nil
 }
 
-// ERC777Sent represents a Sent event raised by the ERC777 contract.
+// ERC777Sent represents a Sent event raised by the ERC777 service.
 type ERC777Sent struct {
 	Operator     common.Address
 	From         common.Address
@@ -1497,7 +1497,7 @@ type ERC777Sent struct {
 	Raw          types.Log // Blockchain specific contextual infos
 }
 
-// FilterSent is a free log retrieval operation binding the contract event 0x06b541ddaa720db2b10a4d0cdac39b8d360425fc073085fac19bc82614677987.
+// FilterSent is a free log retrieval operation binding the service event 0x06b541ddaa720db2b10a4d0cdac39b8d360425fc073085fac19bc82614677987.
 //
 // Solidity: event Sent(address indexed operator, address indexed from, address indexed to, uint256 amount, bytes data, bytes operatorData)
 func (_ERC777 *ERC777Filterer) FilterSent(opts *bind.FilterOpts, operator []common.Address, from []common.Address, to []common.Address) (*ERC777SentIterator, error) {
@@ -1522,7 +1522,7 @@ func (_ERC777 *ERC777Filterer) FilterSent(opts *bind.FilterOpts, operator []comm
 	return &ERC777SentIterator{contract: _ERC777.contract, event: "Sent", logs: logs, sub: sub}, nil
 }
 
-// WatchSent is a free log subscription operation binding the contract event 0x06b541ddaa720db2b10a4d0cdac39b8d360425fc073085fac19bc82614677987.
+// WatchSent is a free log subscription operation binding the service event 0x06b541ddaa720db2b10a4d0cdac39b8d360425fc073085fac19bc82614677987.
 //
 // Solidity: event Sent(address indexed operator, address indexed from, address indexed to, uint256 amount, bytes data, bytes operatorData)
 func (_ERC777 *ERC777Filterer) WatchSent(opts *bind.WatchOpts, sink chan<- *ERC777Sent, operator []common.Address, from []common.Address, to []common.Address) (event.Subscription, error) {
@@ -1572,7 +1572,7 @@ func (_ERC777 *ERC777Filterer) WatchSent(opts *bind.WatchOpts, sink chan<- *ERC7
 	}), nil
 }
 
-// ParseSent is a log parse operation binding the contract event 0x06b541ddaa720db2b10a4d0cdac39b8d360425fc073085fac19bc82614677987.
+// ParseSent is a log parse operation binding the service event 0x06b541ddaa720db2b10a4d0cdac39b8d360425fc073085fac19bc82614677987.
 //
 // Solidity: event Sent(address indexed operator, address indexed from, address indexed to, uint256 amount, bytes data, bytes operatorData)
 func (_ERC777 *ERC777Filterer) ParseSent(log types.Log) (*ERC777Sent, error) {
@@ -1584,9 +1584,9 @@ func (_ERC777 *ERC777Filterer) ParseSent(log types.Log) (*ERC777Sent, error) {
 	return event, nil
 }
 
-// ERC777TransferIterator is returned from FilterTransfer and is used to iterate over the raw logs and unpacked data for Transfer events raised by the ERC777 contract.
+// ERC777TransferIterator is returned from FilterTransfer and is used to iterate over the raw logs and unpacked data for Transfer events raised by the ERC777 service.
 type ERC777TransferIterator struct {
-	Event *ERC777Transfer // Event containing the contract specifics and raw log
+	Event *ERC777Transfer // Event containing the service specifics and raw log
 
 	contract *bind.BoundContract // Generic contract to use for unpacking event data
 	event    string              // Event name to use for unpacking event data
@@ -1651,7 +1651,7 @@ func (it *ERC777TransferIterator) Close() error {
 	return nil
 }
 
-// ERC777Transfer represents a Transfer event raised by the ERC777 contract.
+// ERC777Transfer represents a Transfer event raised by the ERC777 service.
 type ERC777Transfer struct {
 	From  common.Address
 	To    common.Address
@@ -1659,7 +1659,7 @@ type ERC777Transfer struct {
 	Raw   types.Log // Blockchain specific contextual infos
 }
 
-// FilterTransfer is a free log retrieval operation binding the contract event 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef.
+// FilterTransfer is a free log retrieval operation binding the service event 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef.
 //
 // Solidity: event Transfer(address indexed from, address indexed to, uint256 value)
 func (_ERC777 *ERC777Filterer) FilterTransfer(opts *bind.FilterOpts, from []common.Address, to []common.Address) (*ERC777TransferIterator, error) {
@@ -1680,7 +1680,7 @@ func (_ERC777 *ERC777Filterer) FilterTransfer(opts *bind.FilterOpts, from []comm
 	return &ERC777TransferIterator{contract: _ERC777.contract, event: "Transfer", logs: logs, sub: sub}, nil
 }
 
-// WatchTransfer is a free log subscription operation binding the contract event 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef.
+// WatchTransfer is a free log subscription operation binding the service event 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef.
 //
 // Solidity: event Transfer(address indexed from, address indexed to, uint256 value)
 func (_ERC777 *ERC777Filterer) WatchTransfer(opts *bind.WatchOpts, sink chan<- *ERC777Transfer, from []common.Address, to []common.Address) (event.Subscription, error) {
@@ -1726,7 +1726,7 @@ func (_ERC777 *ERC777Filterer) WatchTransfer(opts *bind.WatchOpts, sink chan<- *
 	}), nil
 }
 
-// ParseTransfer is a log parse operation binding the contract event 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef.
+// ParseTransfer is a log parse operation binding the service event 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef.
 //
 // Solidity: event Transfer(address indexed from, address indexed to, uint256 value)
 func (_ERC777 *ERC777Filterer) ParseTransfer(log types.Log) (*ERC777Transfer, error) {

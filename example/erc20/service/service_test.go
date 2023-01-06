@@ -1,24 +1,39 @@
-package chain
+package service
 
 import (
 	"context"
 	"encoding/json"
 	"fmt"
 	"github.com/ethereum/go-ethereum/common"
-	"github.com/ronin66666/go-eth/global"
 	"log"
 	"math/big"
 	"testing"
 )
 
-// 获取区块信息
-func TestGetBlockByNumber(t *testing.T) {
-	client, err := NewClient(global.ETH_RUL)
+// 获取最新区块
+func TestLastBlockNumber(t *testing.T) {
+
+	s, err := NewService(context.Background(), "https://test.lixb.io")
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	block, err := client.GetBlockByNumber(big.NewInt(16001987))
+	n, err := s.BlockNumber(context.Background())
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	println("lastBlockNumber = ", n)
+}
+
+// 获取区块信息
+func TestGetBlockByNumber(t *testing.T) {
+	client, err := NewService(context.Background(), "https://test.lixb.io")
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	block, err := client.BlockByNumber(context.Background(), big.NewInt(449414))
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -34,7 +49,7 @@ func TestGetBlockByNumber(t *testing.T) {
 	//获取交易数量
 	count := block.Transactions().Len()
 	fmt.Println("transaction count = ", count)
-	fmt.Println("transaction count = ", block.Size())
+	fmt.Println("transaction size = ", block.Size())
 
 	//遍历获取每笔交易的信息
 	for _, tx := range block.Transactions() {
@@ -52,7 +67,7 @@ func TestGetBlockByNumber(t *testing.T) {
 	}
 }
 
-func getTransferReceipt(client *Client, txHash common.Hash) {
+func getTransferReceipt(client *Service, txHash common.Hash) {
 	receipt, err := client.TransactionReceipt(context.Background(), txHash)
 	if err != nil {
 		log.Fatal(err)
