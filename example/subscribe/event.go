@@ -25,8 +25,6 @@ func (s *Service) FilterReserved(ctx context.Context, subscribeAddr string, star
 		Context: ctx,
 	}
 
-	//var from = []common.Address{common.HexToAddress("0x7EA470A705C67257cbe9bE45e08824706c2a490A"), common.HexToAddress("0xAADBD70f7d25710632A7669281902202533A9FB7")}
-
 	itr, err := ct.FilterReserved(filterOpts)
 	if err != nil {
 		log.Fatalln(err)
